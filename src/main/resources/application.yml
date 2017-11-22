@@ -1,0 +1,32 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: 123456
+#    url: jdbc:mysql://192.168.31.163/sell?characterEncoding=utf-8&useSSL=false
+    url: jdbc:mysql://192.168.0.176/sell?characterEncoding=utf-8&useSSL=false
+
+  jpa:
+    show-sql: true
+  jackson:
+    default-property-inclusion: non_null
+server:
+  context-path: /sell
+#logging:
+#  pattern:
+#    console: "%d-%msg%n"
+#  file: ./var/log/tomcate/sell.log
+#  level: debug
+##  path: ./var/log/tomcat/
+
+wechat:
+  mpAppId: wx8cb1041a623f9e68
+  mpAppSecret: 7ce2c193a1727b1802a6c3c03796464b
+github:
+  url: https://github.com/login/oauth/authorize?
+  redirectUrl: http://127.0.0.1:8080/sell/oauth/githubOauth
+  accessTokenUrl: https://github.com/login/oauth/access_token?
+  clientId: 3e23e9b1d0788e3034ff
+  clientSecret: f0ebd5865d54741c07fbcbec28d7e8f90229a8c4
+  state: 1
+  apiInfo: https://api.github.com/user?

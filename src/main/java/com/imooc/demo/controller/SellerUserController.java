@@ -3,6 +3,7 @@ package com.imooc.demo.controller;
 import com.imooc.demo.constant.RedisConfig;
 import com.imooc.demo.dataobject.SellerInfo;
 import com.imooc.demo.enums.ResultEnums;
+import com.imooc.demo.exception.SellException;
 import com.imooc.demo.service.SellerService;
 import com.imooc.demo.utils.CookieUtil;
 import java.util.Map;
@@ -39,6 +40,7 @@ public class SellerUserController {
     if (sellerInfo == null){
       map.put("msg", ResultEnums.LOGIN_ERROR.getMsg());
       map.put("url","/sell/seller/loginto");
+
 
       return new ModelAndView("common/error",map);
     }

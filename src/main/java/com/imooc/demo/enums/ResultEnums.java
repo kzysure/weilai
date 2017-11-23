@@ -25,6 +25,8 @@ public enum ResultEnums {
   ORDER_OWNER_ERROR(19,"订单详情不允许被访问"),
   WECHAT_MP_ERROR(20,"微信公众账号错误"),
   ORDER_CANCEL_SUCCESS(21,"订单取消成功"),
+  LOGIN_ERROR(22,"登陆失败"),
+  LOGOUT_SUCCESS(23,"登出成功"),
 
   ;
   private Integer code;

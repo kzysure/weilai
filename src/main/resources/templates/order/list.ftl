@@ -273,6 +273,12 @@
   </style>
 </head>
 <body>
+<#--模拟弹窗-->
+<div id="alert" class="col-md-4 col-md-offset-4" style="position: fixed;top: 5px;display: none;background-color:darkseagreen;height: 80px;z-index: 999;">
+  <h4>您有新的胃来外卖订单，是否接单？</h4>
+  <button class="btn btn-success" onclick="closeAlert()" >接单</button>
+  <button class="btn btn-info" onclick="closeAlert()">取消接单</button>
+</div>
 <div class="toggled" id="wrapper">
   <#--SideBar-->
   <#include "./nav.ftl">
@@ -400,7 +406,57 @@
 <div style="">
   <a onclick="fullScreen()" style="cursor: pointer">📱全屏</a>
 </div>
+      <audio src="http://xmdx.sc.chinaz.com/Files/DownLoad/sound1/201706/8855.wav" id="reminderMusic" preload="auto"></audio>
 <script>
+  var websocket = null;
+  if('WebSocket' in window){
+    websocket = new WebSocket('ws://127.0.0.1:8080/sell/websocket');
+  }else {
+    alert("该浏览器不支持websocket");
+  }
+  websocket.onopen =function (event) { 
+    console.log("建立ws连接");
+  }
+  websocket.onclose = function (event) {
+    console.log("关闭ws连接");
+  }
+  websocket.onmessage = function (event) {
+    console.log("收到消息:"+event.data);
+    
+    //弹窗，播放音乐
+//    music = document.getElementById("reminderMusic");
+//    music.play();
+  reminder();
+  document.getElementById("alert").style.display="block";
+
+
+
+
+  }
+  function reminder () {
+    var audio = document.createElement("audio");
+    audio.src = "http://xmdx.sc.chinaz.com/Files/DownLoad/sound1/201706/8855.wav";
+    audio.play();
+  }
+  function confirm() {
+    confirm("您有新的胃来外卖订单，是否接单");
+
+  }
+  websocket.onerror = function () {
+    alert("通信错误");
+  }
+  window.onbeforeunload = function () {
+    websocket.close();
+  }
+  //关闭弹窗
+  function closeAlert(){
+    document.getElementById("alert").style.display="none";
+
+  }
+
+
+
+  //全屏实现
   var isFullScreen = false;
   var de =document.documentElement;
   var dex = document;

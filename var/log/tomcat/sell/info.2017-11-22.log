@@ -898,3 +898,531 @@ Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframewor
 Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
 Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
 SQL Error: 0, SQLState: 08S01
+SQL Error: 0, SQLState: 08S01
+Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5b202a3a: startup date [Wed Nov 22 14:04:57 CST 2017]; root of context hierarchy
+Unregistering JMX-exposed beans on shutdown
+Closing JPA EntityManagerFactory for persistence unit 'default'
+HV000001: Hibernate Validator 5.3.5.Final
+Starting SellApplication on kzysuredeMacBook-Pro.local with PID 2875 (/Users/kzysure/workspace/Test/sell/target/classes started by kzysure in /Users/kzysure/workspace/Test/sell)
+No active profile set, falling back to default profiles: default
+Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5b202a3a: startup date [Wed Nov 22 15:52:22 CST 2017]; root of context hierarchy
+JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+Tomcat initialized with port(s): 8080 (http)
+Starting service [Tomcat]
+Starting Servlet Engine: Apache Tomcat/8.5.23
+Initializing Spring embedded WebApplicationContext
+Root WebApplicationContext: initialization completed in 3400 ms
+Mapping servlet: 'dispatcherServlet' to [/]
+Mapping filter: 'characterEncodingFilter' to: [/*]
+Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+Mapping filter: 'httpPutFormContentFilter' to: [/*]
+Mapping filter: 'requestContextFilter' to: [/*]
+HV000001: Hibernate Validator 5.3.5.Final
+Starting SellApplication on kzysuredeMacBook-Pro.local with PID 2897 (/Users/kzysure/workspace/Test/sell/target/classes started by kzysure in /Users/kzysure/workspace/Test/sell)
+No active profile set, falling back to default profiles: default
+Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5b202a3a: startup date [Wed Nov 22 15:53:37 CST 2017]; root of context hierarchy
+JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+Tomcat initialized with port(s): 8080 (http)
+Starting service [Tomcat]
+Starting Servlet Engine: Apache Tomcat/8.5.23
+Initializing Spring embedded WebApplicationContext
+Root WebApplicationContext: initialization completed in 2602 ms
+Mapping servlet: 'dispatcherServlet' to [/]
+Mapping filter: 'characterEncodingFilter' to: [/*]
+Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+Mapping filter: 'httpPutFormContentFilter' to: [/*]
+Mapping filter: 'requestContextFilter' to: [/*]
+HV000001: Hibernate Validator 5.3.5.Final
+Starting SellApplication on kzysuredeMacBook-Pro.local with PID 2918 (/Users/kzysure/workspace/Test/sell/target/classes started by kzysure in /Users/kzysure/workspace/Test/sell)
+No active profile set, falling back to default profiles: default
+Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5b202a3a: startup date [Wed Nov 22 15:55:12 CST 2017]; root of context hierarchy
+JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+Tomcat initialized with port(s): 8080 (http)
+Starting service [Tomcat]
+Starting Servlet Engine: Apache Tomcat/8.5.23
+Initializing Spring embedded WebApplicationContext
+Root WebApplicationContext: initialization completed in 2713 ms
+Mapping servlet: 'dispatcherServlet' to [/]
+Mapping filter: 'characterEncodingFilter' to: [/*]
+Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+Mapping filter: 'httpPutFormContentFilter' to: [/*]
+Mapping filter: 'requestContextFilter' to: [/*]
+Building JPA container EntityManagerFactory for persistence unit 'default'
+HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+HHH000412: Hibernate Core {5.0.12.Final}
+HHH000206: hibernate.properties not found
+HHH000021: Bytecode provider name : javassist
+HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+Initialized JPA EntityManagerFactory for persistence unit 'default'
+Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5b202a3a: startup date [Wed Nov 22 15:55:12 CST 2017]; root of context hierarchy
+Mapped "{[/buyer/order/create],methods=[POST]}" onto public com.imooc.demo.VO.ResultVO<java.util.Map<java.lang.String, java.lang.String>> com.imooc.demo.controller.BuyerOrderController.createOrder(com.imooc.demo.form.OrderForm,org.springframework.validation.BindingResult)
+Mapped "{[/buyer/order/list],methods=[GET]}" onto public com.imooc.demo.VO.ResultVO<java.util.List<com.imooc.demo.dto.OrderDTO>> com.imooc.demo.controller.BuyerOrderController.findList(com.imooc.demo.form.ListForm)
+Mapped "{[/buyer/order/detail],methods=[GET]}" onto public com.imooc.demo.VO.ResultVO<com.imooc.demo.dto.OrderDTO> com.imooc.demo.controller.BuyerOrderController.finOne(java.lang.String,java.lang.String)
+Mapped "{[/buyer/order/cancel],methods=[POST]}" onto public com.imooc.demo.VO.ResultVO com.imooc.demo.controller.BuyerOrderController.cancelOrder(java.lang.String,java.lang.String)
+Mapped "{[/buyer/product/list],methods=[GET]}" onto public com.imooc.demo.VO.ResultVO com.imooc.demo.controller.BuyerProductController.list()
+Mapped "{[/oauth/githubOauth],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.imooc.demo.controller.GithubOauth.githubOauth(java.lang.String,java.lang.String,java.util.Map<java.lang.String, java.lang.String>)
+Mapped "{[/pay/create],methods=[GET]}" onto public void com.imooc.demo.controller.PayController.create(java.lang.String,java.lang.String)
+Mapped "{[/seller/product/list],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.imooc.demo.controller.ProductController.list(java.lang.Integer,java.lang.Integer,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/seller/login],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.imooc.demo.controller.SellerLoginController.login(java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/seller/order/list],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.imooc.demo.controller.SellerOrderController.list(java.lang.Integer,java.lang.Integer,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/seller/order/detail],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.imooc.demo.controller.SellerOrderController.detail(java.lang.String,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/seller/order/finish],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.imooc.demo.controller.SellerOrderController.finish(java.lang.String,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/seller/order/cancel],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.imooc.demo.controller.SellerOrderController.cancel(java.lang.String,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/wechat/userInfo],methods=[GET]}" onto public java.lang.String com.imooc.demo.controller.WechatController.getUserInfo(java.lang.String,java.lang.String)
+Mapped "{[/wechat/authorize],methods=[GET]}" onto public java.lang.String com.imooc.demo.controller.WechatController.authorize(java.lang.String)
+Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+ClassTemplateLoader for Spring macros added to FreeMarker configuration
+Registering beans for JMX exposure on startup
+Initializing ProtocolHandler ["http-nio-8080"]
+Starting ProtocolHandler ["http-nio-8080"]
+Using a shared selector for servlet write/read
+Tomcat started on port(s): 8080 (http)
+Started SellApplication in 23.957 seconds (JVM running for 39.409)
+Initializing Spring FrameworkServlet 'dispatcherServlet'
+FrameworkServlet 'dispatcherServlet': initialization started
+FrameworkServlet 'dispatcherServlet': initialization completed in 22 ms
+HHH000397: Using ASTQueryTranslatorFactory
+HV000001: Hibernate Validator 5.3.5.Final
+Starting SellApplication on kzysuredeMacBook-Pro.local with PID 3422 (/Users/kzysure/workspace/Test/sell/target/classes started by kzysure in /Users/kzysure/workspace/Test/sell)
+No active profile set, falling back to default profiles: default
+Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@72722a6b: startup date [Wed Nov 22 18:02:17 CST 2017]; root of context hierarchy
+JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+Tomcat initialized with port(s): 8080 (http)
+Starting service [Tomcat]
+Starting Servlet Engine: Apache Tomcat/8.5.23
+Initializing Spring embedded WebApplicationContext
+Root WebApplicationContext: initialization completed in 3620 ms
+Mapping servlet: 'dispatcherServlet' to [/]
+Mapping filter: 'characterEncodingFilter' to: [/*]
+Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+Mapping filter: 'httpPutFormContentFilter' to: [/*]
+Mapping filter: 'requestContextFilter' to: [/*]
+HV000001: Hibernate Validator 5.3.5.Final
+Starting SellApplication on kzysuredeMacBook-Pro.local with PID 3446 (/Users/kzysure/workspace/Test/sell/target/classes started by kzysure in /Users/kzysure/workspace/Test/sell)
+No active profile set, falling back to default profiles: default
+Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@72722a6b: startup date [Wed Nov 22 18:03:24 CST 2017]; root of context hierarchy
+JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+Tomcat initialized with port(s): 8080 (http)
+Starting service [Tomcat]
+Starting Servlet Engine: Apache Tomcat/8.5.23
+Initializing Spring embedded WebApplicationContext
+Root WebApplicationContext: initialization completed in 3547 ms
+Mapping servlet: 'dispatcherServlet' to [/]
+Mapping filter: 'characterEncodingFilter' to: [/*]
+Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+Mapping filter: 'httpPutFormContentFilter' to: [/*]
+Mapping filter: 'requestContextFilter' to: [/*]
+Building JPA container EntityManagerFactory for persistence unit 'default'
+HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+HHH000412: Hibernate Core {5.0.12.Final}
+HHH000206: hibernate.properties not found
+HHH000021: Bytecode provider name : javassist
+HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+Initialized JPA EntityManagerFactory for persistence unit 'default'
+Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@72722a6b: startup date [Wed Nov 22 18:03:24 CST 2017]; root of context hierarchy
+Mapped "{[/buyer/order/create],methods=[POST]}" onto public com.imooc.demo.VO.ResultVO<java.util.Map<java.lang.String, java.lang.String>> com.imooc.demo.controller.BuyerOrderController.createOrder(com.imooc.demo.form.OrderForm,org.springframework.validation.BindingResult)
+Mapped "{[/buyer/order/list],methods=[GET]}" onto public com.imooc.demo.VO.ResultVO<java.util.List<com.imooc.demo.dto.OrderDTO>> com.imooc.demo.controller.BuyerOrderController.findList(com.imooc.demo.form.ListForm)
+Mapped "{[/buyer/order/detail],methods=[GET]}" onto public com.imooc.demo.VO.ResultVO<com.imooc.demo.dto.OrderDTO> com.imooc.demo.controller.BuyerOrderController.finOne(java.lang.String,java.lang.String)
+Mapped "{[/buyer/order/cancel],methods=[POST]}" onto public com.imooc.demo.VO.ResultVO com.imooc.demo.controller.BuyerOrderController.cancelOrder(java.lang.String,java.lang.String)
+Mapped "{[/buyer/product/list],methods=[GET]}" onto public com.imooc.demo.VO.ResultVO com.imooc.demo.controller.BuyerProductController.list()
+Mapped "{[/oauth/githubOauth],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.imooc.demo.controller.GithubOauth.githubOauth(java.lang.String,java.lang.String,java.util.Map<java.lang.String, java.lang.String>)
+Mapped "{[/pay/create],methods=[GET]}" onto public void com.imooc.demo.controller.PayController.create(java.lang.String,java.lang.String)
+Mapped "{[/seller/product/list],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.imooc.demo.controller.ProductController.list(java.lang.Integer,java.lang.Integer,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/seller/login],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.imooc.demo.controller.SellerLoginController.login(java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/seller/order/list],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.imooc.demo.controller.SellerOrderController.list(java.lang.Integer,java.lang.Integer,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/seller/order/detail],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.imooc.demo.controller.SellerOrderController.detail(java.lang.String,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/seller/order/finish],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.imooc.demo.controller.SellerOrderController.finish(java.lang.String,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/seller/order/cancel],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.imooc.demo.controller.SellerOrderController.cancel(java.lang.String,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/wechat/userInfo],methods=[GET]}" onto public java.lang.String com.imooc.demo.controller.WechatController.getUserInfo(java.lang.String,java.lang.String)
+Mapped "{[/wechat/authorize],methods=[GET]}" onto public java.lang.String com.imooc.demo.controller.WechatController.authorize(java.lang.String)
+Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+ClassTemplateLoader for Spring macros added to FreeMarker configuration
+Registering beans for JMX exposure on startup
+Initializing ProtocolHandler ["http-nio-8080"]
+Starting ProtocolHandler ["http-nio-8080"]
+Pausing ProtocolHandler ["http-nio-8080"]
+Stopping service [Tomcat]
+The stop() method was called on component [StandardServer[-1]] after stop() had already been called. The second call will be ignored.
+Stopping ProtocolHandler ["http-nio-8080"]
+Destroying ProtocolHandler ["http-nio-8080"]
+
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
+Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@72722a6b: startup date [Wed Nov 22 18:03:24 CST 2017]; root of context hierarchy
+Unregistering JMX-exposed beans on shutdown
+Closing JPA EntityManagerFactory for persistence unit 'default'
+HV000001: Hibernate Validator 5.3.5.Final
+Starting SellApplication on kzysuredeMacBook-Pro.local with PID 3468 (/Users/kzysure/workspace/Test/sell/target/classes started by kzysure in /Users/kzysure/workspace/Test/sell)
+No active profile set, falling back to default profiles: default
+Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5b202a3a: startup date [Wed Nov 22 18:06:19 CST 2017]; root of context hierarchy
+JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+Tomcat initialized with port(s): 8080 (http)
+Starting service [Tomcat]
+Starting Servlet Engine: Apache Tomcat/8.5.23
+Initializing Spring embedded WebApplicationContext
+Root WebApplicationContext: initialization completed in 2809 ms
+Mapping servlet: 'dispatcherServlet' to [/]
+Mapping filter: 'characterEncodingFilter' to: [/*]
+Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+Mapping filter: 'httpPutFormContentFilter' to: [/*]
+Mapping filter: 'requestContextFilter' to: [/*]
+Building JPA container EntityManagerFactory for persistence unit 'default'
+HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+HHH000412: Hibernate Core {5.0.12.Final}
+HHH000206: hibernate.properties not found
+HHH000021: Bytecode provider name : javassist
+HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+Initialized JPA EntityManagerFactory for persistence unit 'default'
+Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5b202a3a: startup date [Wed Nov 22 18:06:19 CST 2017]; root of context hierarchy
+Mapped "{[/buyer/order/create],methods=[POST]}" onto public com.imooc.demo.VO.ResultVO<java.util.Map<java.lang.String, java.lang.String>> com.imooc.demo.controller.BuyerOrderController.createOrder(com.imooc.demo.form.OrderForm,org.springframework.validation.BindingResult)
+Mapped "{[/buyer/order/list],methods=[GET]}" onto public com.imooc.demo.VO.ResultVO<java.util.List<com.imooc.demo.dto.OrderDTO>> com.imooc.demo.controller.BuyerOrderController.findList(com.imooc.demo.form.ListForm)
+Mapped "{[/buyer/order/detail],methods=[GET]}" onto public com.imooc.demo.VO.ResultVO<com.imooc.demo.dto.OrderDTO> com.imooc.demo.controller.BuyerOrderController.finOne(java.lang.String,java.lang.String)
+Mapped "{[/buyer/order/cancel],methods=[POST]}" onto public com.imooc.demo.VO.ResultVO com.imooc.demo.controller.BuyerOrderController.cancelOrder(java.lang.String,java.lang.String)
+Mapped "{[/buyer/product/list],methods=[GET]}" onto public com.imooc.demo.VO.ResultVO com.imooc.demo.controller.BuyerProductController.list()
+Mapped "{[/oauth/githubOauth],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.imooc.demo.controller.GithubOauth.githubOauth(java.lang.String,java.lang.String,java.util.Map<java.lang.String, java.lang.String>)
+Mapped "{[/pay/create],methods=[GET]}" onto public void com.imooc.demo.controller.PayController.create(java.lang.String,java.lang.String)
+Mapped "{[/seller/product/list],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.imooc.demo.controller.ProductController.list(java.lang.Integer,java.lang.Integer,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/seller/login],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.imooc.demo.controller.SellerLoginController.login(java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/seller/order/list],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.imooc.demo.controller.SellerOrderController.list(java.lang.Integer,java.lang.Integer,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/seller/order/detail],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.imooc.demo.controller.SellerOrderController.detail(java.lang.String,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/seller/order/finish],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.imooc.demo.controller.SellerOrderController.finish(java.lang.String,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/seller/order/cancel],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.imooc.demo.controller.SellerOrderController.cancel(java.lang.String,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/wechat/userInfo],methods=[GET]}" onto public java.lang.String com.imooc.demo.controller.WechatController.getUserInfo(java.lang.String,java.lang.String)
+Mapped "{[/wechat/authorize],methods=[GET]}" onto public java.lang.String com.imooc.demo.controller.WechatController.authorize(java.lang.String)
+Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+ClassTemplateLoader for Spring macros added to FreeMarker configuration
+Registering beans for JMX exposure on startup
+Initializing ProtocolHandler ["http-nio-8080"]
+Starting ProtocolHandler ["http-nio-8080"]
+Using a shared selector for servlet write/read
+Tomcat started on port(s): 8080 (http)
+Started SellApplication in 9.496 seconds (JVM running for 15.089)
+Initializing Spring FrameworkServlet 'dispatcherServlet'
+FrameworkServlet 'dispatcherServlet': initialization started
+FrameworkServlet 'dispatcherServlet': initialization completed in 24 ms
+HHH000397: Using ASTQueryTranslatorFactory
+Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Mapped "{[/buyer/order/create],methods=[POST]}" onto public com.imooc.demo.VO.ResultVO<java.util.Map<java.lang.String, java.lang.String>> com.imooc.demo.controller.BuyerOrderController.createOrder(com.imooc.demo.form.OrderForm,org.springframework.validation.BindingResult)
+Mapped "{[/buyer/order/list],methods=[GET]}" onto public com.imooc.demo.VO.ResultVO<java.util.List<com.imooc.demo.dto.OrderDTO>> com.imooc.demo.controller.BuyerOrderController.findList(com.imooc.demo.form.ListForm)
+Mapped "{[/buyer/order/detail],methods=[GET]}" onto public com.imooc.demo.VO.ResultVO<com.imooc.demo.dto.OrderDTO> com.imooc.demo.controller.BuyerOrderController.finOne(java.lang.String,java.lang.String)
+Mapped "{[/buyer/order/cancel],methods=[POST]}" onto public com.imooc.demo.VO.ResultVO com.imooc.demo.controller.BuyerOrderController.cancelOrder(java.lang.String,java.lang.String)
+Mapped "{[/buyer/product/list],methods=[GET]}" onto public com.imooc.demo.VO.ResultVO com.imooc.demo.controller.BuyerProductController.list()
+Mapped "{[/oauth/githubOauth],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.imooc.demo.controller.GithubOauth.githubOauth(java.lang.String,java.lang.String,java.util.Map<java.lang.String, java.lang.String>)
+Mapped "{[/pay/create],methods=[GET]}" onto public void com.imooc.demo.controller.PayController.create(java.lang.String,java.lang.String)
+Mapped "{[/seller/product/list],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.imooc.demo.controller.ProductController.list(java.lang.Integer,java.lang.Integer,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/seller/order/list],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.imooc.demo.controller.SellerOrderController.list(java.lang.Integer,java.lang.Integer,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/seller/order/detail],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.imooc.demo.controller.SellerOrderController.detail(java.lang.String,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/seller/order/finish],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.imooc.demo.controller.SellerOrderController.finish(java.lang.String,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/seller/order/cancel],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.imooc.demo.controller.SellerOrderController.cancel(java.lang.String,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/wechat/userInfo],methods=[GET]}" onto public java.lang.String com.imooc.demo.controller.WechatController.getUserInfo(java.lang.String,java.lang.String)
+Mapped "{[/wechat/authorize],methods=[GET]}" onto public java.lang.String com.imooc.demo.controller.WechatController.authorize(java.lang.String)
+Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+Mapped "{[/buyer/order/create],methods=[POST]}" onto public com.imooc.demo.VO.ResultVO<java.util.Map<java.lang.String, java.lang.String>> com.imooc.demo.controller.BuyerOrderController.createOrder(com.imooc.demo.form.OrderForm,org.springframework.validation.BindingResult)
+Mapped "{[/buyer/order/list],methods=[GET]}" onto public com.imooc.demo.VO.ResultVO<java.util.List<com.imooc.demo.dto.OrderDTO>> com.imooc.demo.controller.BuyerOrderController.findList(com.imooc.demo.form.ListForm)
+Mapped "{[/buyer/order/detail],methods=[GET]}" onto public com.imooc.demo.VO.ResultVO<com.imooc.demo.dto.OrderDTO> com.imooc.demo.controller.BuyerOrderController.finOne(java.lang.String,java.lang.String)
+Mapped "{[/buyer/order/cancel],methods=[POST]}" onto public com.imooc.demo.VO.ResultVO com.imooc.demo.controller.BuyerOrderController.cancelOrder(java.lang.String,java.lang.String)
+Mapped "{[/buyer/product/list],methods=[GET]}" onto public com.imooc.demo.VO.ResultVO com.imooc.demo.controller.BuyerProductController.list()
+Mapped "{[/oauth/githubOauth],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.imooc.demo.controller.GithubOauth.githubOauth(java.lang.String,java.lang.String,java.util.Map<java.lang.String, java.lang.String>)
+Mapped "{[/pay/create],methods=[GET]}" onto public void com.imooc.demo.controller.PayController.create(java.lang.String,java.lang.String)
+Mapped "{[/seller/product/list],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.imooc.demo.controller.ProductController.list(java.lang.Integer,java.lang.Integer,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/seller/order/list],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.imooc.demo.controller.SellerOrderController.list(java.lang.Integer,java.lang.Integer,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/seller/order/detail],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.imooc.demo.controller.SellerOrderController.detail(java.lang.String,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/seller/order/finish],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.imooc.demo.controller.SellerOrderController.finish(java.lang.String,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/seller/order/cancel],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.imooc.demo.controller.SellerOrderController.cancel(java.lang.String,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/wechat/userInfo],methods=[GET]}" onto public java.lang.String com.imooc.demo.controller.WechatController.getUserInfo(java.lang.String,java.lang.String)
+Mapped "{[/wechat/authorize],methods=[GET]}" onto public java.lang.String com.imooc.demo.controller.WechatController.authorize(java.lang.String)
+Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5b202a3a: startup date [Wed Nov 22 18:06:19 CST 2017]; root of context hierarchy
+Unregistering JMX-exposed beans on shutdown
+Closing JPA EntityManagerFactory for persistence unit 'default'
+HV000001: Hibernate Validator 5.3.5.Final
+Starting SellApplication on kzysuredeMacBook-Pro.local with PID 3923 (/Users/kzysure/workspace/Test/sell/target/classes started by kzysure in /Users/kzysure/workspace/Test/sell)
+No active profile set, falling back to default profiles: default
+Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@10b9db7b: startup date [Wed Nov 22 19:33:09 CST 2017]; root of context hierarchy
+JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+Tomcat initialized with port(s): 8080 (http)
+Starting service [Tomcat]
+Starting Servlet Engine: Apache Tomcat/8.5.23
+Initializing Spring embedded WebApplicationContext
+Root WebApplicationContext: initialization completed in 2770 ms
+Mapping servlet: 'dispatcherServlet' to [/]
+Mapping filter: 'characterEncodingFilter' to: [/*]
+Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+Mapping filter: 'httpPutFormContentFilter' to: [/*]
+Mapping filter: 'requestContextFilter' to: [/*]
+Building JPA container EntityManagerFactory for persistence unit 'default'
+HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+HHH000412: Hibernate Core {5.0.12.Final}
+HHH000206: hibernate.properties not found
+HHH000021: Bytecode provider name : javassist
+HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+Initialized JPA EntityManagerFactory for persistence unit 'default'
+Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@10b9db7b: startup date [Wed Nov 22 19:33:09 CST 2017]; root of context hierarchy
+Mapped "{[/buyer/order/create],methods=[POST]}" onto public com.imooc.demo.VO.ResultVO<java.util.Map<java.lang.String, java.lang.String>> com.imooc.demo.controller.BuyerOrderController.createOrder(com.imooc.demo.form.OrderForm,org.springframework.validation.BindingResult)
+Mapped "{[/buyer/order/list],methods=[GET]}" onto public com.imooc.demo.VO.ResultVO<java.util.List<com.imooc.demo.dto.OrderDTO>> com.imooc.demo.controller.BuyerOrderController.findList(com.imooc.demo.form.ListForm)
+Mapped "{[/buyer/order/detail],methods=[GET]}" onto public com.imooc.demo.VO.ResultVO<com.imooc.demo.dto.OrderDTO> com.imooc.demo.controller.BuyerOrderController.finOne(java.lang.String,java.lang.String)
+Mapped "{[/buyer/order/cancel],methods=[POST]}" onto public com.imooc.demo.VO.ResultVO com.imooc.demo.controller.BuyerOrderController.cancelOrder(java.lang.String,java.lang.String)
+Mapped "{[/buyer/product/list],methods=[GET]}" onto public com.imooc.demo.VO.ResultVO com.imooc.demo.controller.BuyerProductController.list()
+Mapped "{[/oauth/githubOauth],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.imooc.demo.controller.GithubOauthController.githubOauth(java.lang.String,java.lang.String,java.util.Map<java.lang.String, java.lang.String>)
+Mapped "{[/pay/create],methods=[GET]}" onto public void com.imooc.demo.controller.PayController.create(java.lang.String,java.lang.String)
+Mapped "{[/seller/product/list],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.imooc.demo.controller.ProductController.list(java.lang.Integer,java.lang.Integer,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/seller/loginto],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.imooc.demo.controller.SellerLoginController.login(java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/seller/order/list],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.imooc.demo.controller.SellerOrderController.list(java.lang.Integer,java.lang.Integer,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/seller/order/finish],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.imooc.demo.controller.SellerOrderController.finish(java.lang.String,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/seller/order/cancel],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.imooc.demo.controller.SellerOrderController.cancel(java.lang.String,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/seller/order/detail],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.imooc.demo.controller.SellerOrderController.detail(java.lang.String,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/seller/login],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.imooc.demo.controller.SellerUserController.login(java.lang.String,java.util.Map<java.lang.String, java.lang.String>)
+Mapped "{[/seller/logout],methods=[GET]}" onto public void com.imooc.demo.controller.SellerUserController.logout()
+Mapped "{[/wechat/userInfo],methods=[GET]}" onto public java.lang.String com.imooc.demo.controller.WechatController.getUserInfo(java.lang.String,java.lang.String)
+Mapped "{[/wechat/authorize],methods=[GET]}" onto public java.lang.String com.imooc.demo.controller.WechatController.authorize(java.lang.String)
+Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+ClassTemplateLoader for Spring macros added to FreeMarker configuration
+Registering beans for JMX exposure on startup
+Initializing ProtocolHandler ["http-nio-8080"]
+Starting ProtocolHandler ["http-nio-8080"]
+Using a shared selector for servlet write/read
+Tomcat started on port(s): 8080 (http)
+Started SellApplication in 9.874 seconds (JVM running for 15.915)
+Initializing Spring FrameworkServlet 'dispatcherServlet'
+FrameworkServlet 'dispatcherServlet': initialization started
+FrameworkServlet 'dispatcherServlet': initialization completed in 20 ms
+HHH000397: Using ASTQueryTranslatorFactory
+Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@10b9db7b: startup date [Wed Nov 22 19:33:09 CST 2017]; root of context hierarchy
+Unregistering JMX-exposed beans on shutdown
+Closing JPA EntityManagerFactory for persistence unit 'default'
+HV000001: Hibernate Validator 5.3.5.Final
+Starting SellApplication on kzysuredeMacBook-Pro.local with PID 6732 (/Users/kzysure/workspace/Test/sell/target/classes started by kzysure in /Users/kzysure/workspace/Test/sell)
+No active profile set, falling back to default profiles: default
+Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5911e990: startup date [Wed Nov 22 20:09:30 CST 2017]; root of context hierarchy
+Multiple Spring Data modules found, entering strict repository configuration mode!
+Multiple Spring Data modules found, entering strict repository configuration mode!
+Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.imooc.demo.repository.OrderDetailRepository.
+Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.imooc.demo.repository.SellerInfoRepository.
+Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.imooc.demo.repository.OrderMasterRepository.
+Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.imooc.demo.repository.ProductInfoRepository.
+Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.imooc.demo.repository.ProductCategoryRepository.
+JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+Tomcat initialized with port(s): 8080 (http)
+Starting service [Tomcat]
+Starting Servlet Engine: Apache Tomcat/8.5.23
+Initializing Spring embedded WebApplicationContext
+Root WebApplicationContext: initialization completed in 2981 ms
+Mapping servlet: 'dispatcherServlet' to [/]
+Mapping filter: 'characterEncodingFilter' to: [/*]
+Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+Mapping filter: 'httpPutFormContentFilter' to: [/*]
+Mapping filter: 'requestContextFilter' to: [/*]
+Building JPA container EntityManagerFactory for persistence unit 'default'
+HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+HHH000412: Hibernate Core {5.0.12.Final}
+HHH000206: hibernate.properties not found
+HHH000021: Bytecode provider name : javassist
+HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+Initialized JPA EntityManagerFactory for persistence unit 'default'
+Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5911e990: startup date [Wed Nov 22 20:09:30 CST 2017]; root of context hierarchy
+Mapped "{[/buyer/order/create],methods=[POST]}" onto public com.imooc.demo.VO.ResultVO<java.util.Map<java.lang.String, java.lang.String>> com.imooc.demo.controller.BuyerOrderController.createOrder(com.imooc.demo.form.OrderForm,org.springframework.validation.BindingResult)
+Mapped "{[/buyer/order/list],methods=[GET]}" onto public com.imooc.demo.VO.ResultVO<java.util.List<com.imooc.demo.dto.OrderDTO>> com.imooc.demo.controller.BuyerOrderController.findList(com.imooc.demo.form.ListForm)
+Mapped "{[/buyer/order/detail],methods=[GET]}" onto public com.imooc.demo.VO.ResultVO<com.imooc.demo.dto.OrderDTO> com.imooc.demo.controller.BuyerOrderController.finOne(java.lang.String,java.lang.String)
+Mapped "{[/buyer/order/cancel],methods=[POST]}" onto public com.imooc.demo.VO.ResultVO com.imooc.demo.controller.BuyerOrderController.cancelOrder(java.lang.String,java.lang.String)
+Mapped "{[/buyer/product/list],methods=[GET]}" onto public com.imooc.demo.VO.ResultVO com.imooc.demo.controller.BuyerProductController.list()
+Mapped "{[/oauth/githubOauth],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.imooc.demo.controller.GithubOauthController.githubOauth(java.lang.String,java.lang.String,java.util.Map<java.lang.String, java.lang.String>)
+Mapped "{[/pay/create],methods=[GET]}" onto public void com.imooc.demo.controller.PayController.create(java.lang.String,java.lang.String)
+Mapped "{[/seller/product/list],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.imooc.demo.controller.ProductController.list(java.lang.Integer,java.lang.Integer,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/seller/loginto],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.imooc.demo.controller.SellerLoginController.login(java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/seller/order/list],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.imooc.demo.controller.SellerOrderController.list(java.lang.Integer,java.lang.Integer,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/seller/order/finish],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.imooc.demo.controller.SellerOrderController.finish(java.lang.String,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/seller/order/cancel],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.imooc.demo.controller.SellerOrderController.cancel(java.lang.String,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/seller/order/detail],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.imooc.demo.controller.SellerOrderController.detail(java.lang.String,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/seller/login],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.imooc.demo.controller.SellerUserController.login(java.lang.String,java.util.Map<java.lang.String, java.lang.String>)
+Mapped "{[/seller/logout],methods=[GET]}" onto public void com.imooc.demo.controller.SellerUserController.logout()
+Mapped "{[/wechat/userInfo],methods=[GET]}" onto public java.lang.String com.imooc.demo.controller.WechatController.getUserInfo(java.lang.String,java.lang.String)
+Mapped "{[/wechat/authorize],methods=[GET]}" onto public java.lang.String com.imooc.demo.controller.WechatController.authorize(java.lang.String)
+Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+ClassTemplateLoader for Spring macros added to FreeMarker configuration
+Registering beans for JMX exposure on startup
+Initializing ProtocolHandler ["http-nio-8080"]
+Starting ProtocolHandler ["http-nio-8080"]
+Using a shared selector for servlet write/read
+Tomcat started on port(s): 8080 (http)
+Started SellApplication in 9.062 seconds (JVM running for 15.253)
+Initializing Spring FrameworkServlet 'dispatcherServlet'
+FrameworkServlet 'dispatcherServlet': initialization started
+FrameworkServlet 'dispatcherServlet': initialization completed in 28 ms
+Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+HHH000397: Using ASTQueryTranslatorFactory
+Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5911e990: startup date [Wed Nov 22 20:09:30 CST 2017]; root of context hierarchy
+Unregistering JMX-exposed beans on shutdown
+Closing JPA EntityManagerFactory for persistence unit 'default'
+HV000001: Hibernate Validator 5.3.5.Final
+Starting SellApplication on kzysuredeMacBook-Pro.local with PID 6781 (/Users/kzysure/workspace/Test/sell/target/classes started by kzysure in /Users/kzysure/workspace/Test/sell)
+No active profile set, falling back to default profiles: default
+Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7ca33c24: startup date [Wed Nov 22 20:18:58 CST 2017]; root of context hierarchy
+Multiple Spring Data modules found, entering strict repository configuration mode!
+Multiple Spring Data modules found, entering strict repository configuration mode!
+Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.imooc.demo.repository.OrderDetailRepository.
+Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.imooc.demo.repository.SellerInfoRepository.
+Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.imooc.demo.repository.OrderMasterRepository.
+Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.imooc.demo.repository.ProductInfoRepository.
+Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.imooc.demo.repository.ProductCategoryRepository.
+JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+Tomcat initialized with port(s): 8080 (http)
+Starting service [Tomcat]
+Starting Servlet Engine: Apache Tomcat/8.5.23
+Initializing Spring embedded WebApplicationContext
+Root WebApplicationContext: initialization completed in 2808 ms
+Mapping servlet: 'dispatcherServlet' to [/]
+Mapping filter: 'characterEncodingFilter' to: [/*]
+Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+Mapping filter: 'httpPutFormContentFilter' to: [/*]
+Mapping filter: 'requestContextFilter' to: [/*]
+Building JPA container EntityManagerFactory for persistence unit 'default'
+HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+HHH000412: Hibernate Core {5.0.12.Final}
+HHH000206: hibernate.properties not found
+HHH000021: Bytecode provider name : javassist
+HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+Initialized JPA EntityManagerFactory for persistence unit 'default'
+Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7ca33c24: startup date [Wed Nov 22 20:18:58 CST 2017]; root of context hierarchy
+Mapped "{[/buyer/order/list],methods=[GET]}" onto public com.imooc.demo.VO.ResultVO<java.util.List<com.imooc.demo.dto.OrderDTO>> com.imooc.demo.controller.BuyerOrderController.findList(com.imooc.demo.form.ListForm)
+Mapped "{[/buyer/order/create],methods=[POST]}" onto public com.imooc.demo.VO.ResultVO<java.util.Map<java.lang.String, java.lang.String>> com.imooc.demo.controller.BuyerOrderController.createOrder(com.imooc.demo.form.OrderForm,org.springframework.validation.BindingResult)
+Mapped "{[/buyer/order/detail],methods=[GET]}" onto public com.imooc.demo.VO.ResultVO<com.imooc.demo.dto.OrderDTO> com.imooc.demo.controller.BuyerOrderController.finOne(java.lang.String,java.lang.String)
+Mapped "{[/buyer/order/cancel],methods=[POST]}" onto public com.imooc.demo.VO.ResultVO com.imooc.demo.controller.BuyerOrderController.cancelOrder(java.lang.String,java.lang.String)
+Mapped "{[/buyer/product/list],methods=[GET]}" onto public com.imooc.demo.VO.ResultVO com.imooc.demo.controller.BuyerProductController.list()
+Mapped "{[/oauth/githubOauth],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.imooc.demo.controller.GithubOauthController.githubOauth(java.lang.String,java.lang.String,java.util.Map<java.lang.String, java.lang.String>)
+Mapped "{[/pay/create],methods=[GET]}" onto public void com.imooc.demo.controller.PayController.create(java.lang.String,java.lang.String)
+Mapped "{[/seller/product/list],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.imooc.demo.controller.ProductController.list(java.lang.Integer,java.lang.Integer,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/seller/loginto],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.imooc.demo.controller.SellerLoginController.login(java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/seller/order/list],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.imooc.demo.controller.SellerOrderController.list(java.lang.Integer,java.lang.Integer,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/seller/order/detail],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.imooc.demo.controller.SellerOrderController.detail(java.lang.String,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/seller/order/finish],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.imooc.demo.controller.SellerOrderController.finish(java.lang.String,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/seller/order/cancel],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.imooc.demo.controller.SellerOrderController.cancel(java.lang.String,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/seller/logout],methods=[GET]}" onto public void com.imooc.demo.controller.SellerUserController.logout()
+Mapped "{[/seller/login],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.imooc.demo.controller.SellerUserController.login(java.lang.String,java.util.Map<java.lang.String, java.lang.String>)
+Mapped "{[/wechat/userInfo],methods=[GET]}" onto public java.lang.String com.imooc.demo.controller.WechatController.getUserInfo(java.lang.String,java.lang.String)
+Mapped "{[/wechat/authorize],methods=[GET]}" onto public java.lang.String com.imooc.demo.controller.WechatController.authorize(java.lang.String)
+Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+ClassTemplateLoader for Spring macros added to FreeMarker configuration
+Registering beans for JMX exposure on startup
+Initializing ProtocolHandler ["http-nio-8080"]
+Starting ProtocolHandler ["http-nio-8080"]
+Using a shared selector for servlet write/read
+Tomcat started on port(s): 8080 (http)
+Started SellApplication in 9.04 seconds (JVM running for 14.441)
+Initializing Spring FrameworkServlet 'dispatcherServlet'
+FrameworkServlet 'dispatcherServlet': initialization started
+FrameworkServlet 'dispatcherServlet': initialization completed in 29 ms
+HHH000397: Using ASTQueryTranslatorFactory
+Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Mapped "{[/buyer/order/list],methods=[GET]}" onto public com.imooc.demo.VO.ResultVO<java.util.List<com.imooc.demo.dto.OrderDTO>> com.imooc.demo.controller.BuyerOrderController.findList(com.imooc.demo.form.ListForm)
+Mapped "{[/buyer/order/create],methods=[POST]}" onto public com.imooc.demo.VO.ResultVO<java.util.Map<java.lang.String, java.lang.String>> com.imooc.demo.controller.BuyerOrderController.createOrder(com.imooc.demo.form.OrderForm,org.springframework.validation.BindingResult)
+Mapped "{[/buyer/order/detail],methods=[GET]}" onto public com.imooc.demo.VO.ResultVO<com.imooc.demo.dto.OrderDTO> com.imooc.demo.controller.BuyerOrderController.finOne(java.lang.String,java.lang.String)
+Mapped "{[/buyer/order/cancel],methods=[POST]}" onto public com.imooc.demo.VO.ResultVO com.imooc.demo.controller.BuyerOrderController.cancelOrder(java.lang.String,java.lang.String)
+Mapped "{[/buyer/product/list],methods=[GET]}" onto public com.imooc.demo.VO.ResultVO com.imooc.demo.controller.BuyerProductController.list()
+Mapped "{[/oauth/githubOauth],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.imooc.demo.controller.GithubOauthController.githubOauth(java.lang.String,java.lang.String,java.util.Map<java.lang.String, java.lang.String>)
+Mapped "{[/pay/create],methods=[GET]}" onto public void com.imooc.demo.controller.PayController.create(java.lang.String,java.lang.String)
+Mapped "{[/seller/product/list],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.imooc.demo.controller.ProductController.list(java.lang.Integer,java.lang.Integer,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/seller/loginto],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.imooc.demo.controller.SellerLoginController.login(java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/seller/order/list],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.imooc.demo.controller.SellerOrderController.list(java.lang.Integer,java.lang.Integer,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/seller/order/detail],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.imooc.demo.controller.SellerOrderController.detail(java.lang.String,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/seller/order/finish],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.imooc.demo.controller.SellerOrderController.finish(java.lang.String,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/seller/order/cancel],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.imooc.demo.controller.SellerOrderController.cancel(java.lang.String,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/wechat/userInfo],methods=[GET]}" onto public java.lang.String com.imooc.demo.controller.WechatController.getUserInfo(java.lang.String,java.lang.String)
+Mapped "{[/wechat/authorize],methods=[GET]}" onto public java.lang.String com.imooc.demo.controller.WechatController.authorize(java.lang.String)
+Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+Mapped "{[/seller/logout],methods=[GET]}" onto public void com.imooc.demo.controller.SellerUserController.logout()
+Mapped "{[/seller/login],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.imooc.demo.controller.SellerUserController.login(java.lang.String,java.util.Map<java.lang.String, java.lang.String>,javax.servlet.http.HttpServletResponse)
+Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Mapped "{[/buyer/order/list],methods=[GET]}" onto public com.imooc.demo.VO.ResultVO<java.util.List<com.imooc.demo.dto.OrderDTO>> com.imooc.demo.controller.BuyerOrderController.findList(com.imooc.demo.form.ListForm)
+Mapped "{[/buyer/order/create],methods=[POST]}" onto public com.imooc.demo.VO.ResultVO<java.util.Map<java.lang.String, java.lang.String>> com.imooc.demo.controller.BuyerOrderController.createOrder(com.imooc.demo.form.OrderForm,org.springframework.validation.BindingResult)
+Mapped "{[/buyer/order/detail],methods=[GET]}" onto public com.imooc.demo.VO.ResultVO<com.imooc.demo.dto.OrderDTO> com.imooc.demo.controller.BuyerOrderController.finOne(java.lang.String,java.lang.String)
+Mapped "{[/buyer/order/cancel],methods=[POST]}" onto public com.imooc.demo.VO.ResultVO com.imooc.demo.controller.BuyerOrderController.cancelOrder(java.lang.String,java.lang.String)
+Mapped "{[/buyer/product/list],methods=[GET]}" onto public com.imooc.demo.VO.ResultVO com.imooc.demo.controller.BuyerProductController.list()
+Mapped "{[/oauth/githubOauth],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.imooc.demo.controller.GithubOauthController.githubOauth(java.lang.String,java.lang.String,java.util.Map<java.lang.String, java.lang.String>)
+Mapped "{[/pay/create],methods=[GET]}" onto public void com.imooc.demo.controller.PayController.create(java.lang.String,java.lang.String)
+Mapped "{[/seller/product/list],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.imooc.demo.controller.ProductController.list(java.lang.Integer,java.lang.Integer,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/seller/loginto],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.imooc.demo.controller.SellerLoginController.login(java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/seller/order/list],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.imooc.demo.controller.SellerOrderController.list(java.lang.Integer,java.lang.Integer,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/seller/order/detail],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.imooc.demo.controller.SellerOrderController.detail(java.lang.String,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/seller/order/finish],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.imooc.demo.controller.SellerOrderController.finish(java.lang.String,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/seller/order/cancel],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.imooc.demo.controller.SellerOrderController.cancel(java.lang.String,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/wechat/userInfo],methods=[GET]}" onto public java.lang.String com.imooc.demo.controller.WechatController.getUserInfo(java.lang.String,java.lang.String)
+Mapped "{[/wechat/authorize],methods=[GET]}" onto public java.lang.String com.imooc.demo.controller.WechatController.authorize(java.lang.String)
+Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+Mapped "{[/seller/logout],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.imooc.demo.controller.SellerUserController.logout(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.util.Map<java.lang.String, java.lang.String>)
+Mapped "{[/seller/login],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.imooc.demo.controller.SellerUserController.login(java.lang.String,java.util.Map<java.lang.String, java.lang.String>,javax.servlet.http.HttpServletResponse)
+Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+【微信网页授权】，获取code，result=https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx8cb1041a623f9e68&redirect_uri=http%3A%2F%2Fkzysure.natapp1.cc%2Fsell%2Fwechat%2FuserInfo&response_type=code&scope=snsapi_base&state=http%3A%2F%2Fsell.com%2F%23%2F#wechat_redirect

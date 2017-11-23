@@ -27,7 +27,7 @@ import org.springframework.web.servlet.ModelAndView;
  */
 @Controller
 @RequestMapping("/oauth")
-public class GithubOauth {
+public class GithubOauthController {
   @Autowired
   GithubOauthConfig githubOauthConfig;
   @Autowired
@@ -46,8 +46,6 @@ public class GithubOauth {
  String buffer = oauthService.getGithubAccessToken(url);
  String apiInfo= githubOauthConfig.getApiInfo()+buffer.toString();
  Map<String,Object> map1 = oauthService.getGithubUserInfo(apiInfo);
-//  System.out.println(map1.get("id"));
-//  System.out.println(id);
  SellerInfo sellerInfo = sellerInfoRepository.findOne(map1.get("id").toString());
 
  if (sellerInfo == null){

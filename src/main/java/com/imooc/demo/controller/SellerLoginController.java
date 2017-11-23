@@ -18,7 +18,7 @@ import org.springframework.web.servlet.ModelAndView;
 public class SellerLoginController {
   @Autowired
   GithubOauthConfig githubOauthConfig;
-  @GetMapping("/login")
+  @GetMapping("/loginto")
 public ModelAndView login(Map<String,Object> map){
     String url = githubOauthConfig.getUrl()+"client_id="+githubOauthConfig.getClientId()+"&state="
         +githubOauthConfig.getState()+"&redirect_uri="+githubOauthConfig.getRedirectUrl();

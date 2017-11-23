@@ -14,6 +14,7 @@ import com.imooc.demo.repository.OrderDetailRepository;
 import com.imooc.demo.repository.OrderMasterRepository;
 import com.imooc.demo.service.OrderService;
 import com.imooc.demo.service.ProductInfoService;
+import com.imooc.demo.service.WebSocket;
 import com.imooc.demo.utils.KeyUtil;
 import java.math.BigDecimal;
 import java.math.BigInteger;
@@ -44,6 +45,8 @@ public class OrderServiceImpl implements OrderService {
 @Autowired
   OrderDetailRepository orderDetailRepository;
 @Autowired OrderMasterRepository orderMasterRepository;
+@Autowired
+  WebSocket webSocket;
 @Override
 @Transactional
   public OrderDTO createOrder(OrderDTO orderDTO) {
@@ -86,6 +89,9 @@ public class OrderServiceImpl implements OrderService {
         Collectors.toList());
 
     productInfoService.decreaseStock(cartDTOList);
+    //发送webSocket消息
+      webSocket.sendMessage("您有新的胃来外卖订单");
+
     return orderDTO;
 
   }

@@ -1,9 +1,9 @@
-package com.imooc.demo.service.impl;
+package com.kzysure.demo.service.impl;
 
 import static org.junit.Assert.*;
 
-import com.imooc.demo.dataobject.ProductInfo;
-import com.imooc.demo.enums.ProductStatusEnum;
+import com.kzysure.demo.dataobject.ProductInfo;
+import com.kzysure.demo.enums.ProductStatusEnum;
 import java.math.BigDecimal;
 import java.util.List;
 import org.junit.Assert;
@@ -13,7 +13,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.test.context.junit4.SpringRunner;
-import sun.jvm.hotspot.debugger.Page;
+//import sun.jvm.hotspot.debugger.Page;
 
 /**
  * @author <a href="mailto:kzysure@kzysure.com">kzysure</a>

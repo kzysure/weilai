@@ -1,0 +1,540 @@
+HV000001: Hibernate Validator 5.3.5.Final
+Starting SellApplication on kzysuredeMBP.coamc.com.cn with PID 84197 (/Users/kzysure/workspace/Test/sell/target/classes started by kzysure in /Users/kzysure/workspace/Test/sell)
+No active profile set, falling back to default profiles: default
+Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7a1b4074: startup date [Wed Mar 21 18:11:14 CST 2018]; root of context hierarchy
+Multiple Spring Data modules found, entering strict repository configuration mode!
+Multiple Spring Data modules found, entering strict repository configuration mode!
+Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.kzysure.demo.repository.OrderMasterRepository.
+Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.kzysure.demo.repository.ProductInfoRepository.
+Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.kzysure.demo.repository.SellerInfoRepository.
+Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.kzysure.demo.repository.OrderDetailRepository.
+Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.kzysure.demo.repository.ProductCategoryRepository.
+JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+Tomcat initialized with port(s): 8080 (http)
+Starting service [Tomcat]
+Starting Servlet Engine: Apache Tomcat/8.5.23
+Initializing Spring embedded WebApplicationContext
+Root WebApplicationContext: initialization completed in 5099 ms
+Mapping servlet: 'dispatcherServlet' to [/]
+Mapping filter: 'characterEncodingFilter' to: [/*]
+Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+Mapping filter: 'httpPutFormContentFilter' to: [/*]
+Mapping filter: 'requestContextFilter' to: [/*]
+Building JPA container EntityManagerFactory for persistence unit 'default'
+HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+HHH000412: Hibernate Core {5.0.12.Final}
+HHH000206: hibernate.properties not found
+HHH000021: Bytecode provider name : javassist
+HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+Initialized JPA EntityManagerFactory for persistence unit 'default'
+Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7a1b4074: startup date [Wed Mar 21 18:11:14 CST 2018]; root of context hierarchy
+Mapped "{[/buyer/order/create],methods=[POST]}" onto public com.kzysure.demo.VO.ResultVO<java.util.Map<java.lang.String, java.lang.String>> com.kzysure.demo.controller.BuyerOrderController.createOrder(com.kzysure.demo.form.OrderForm,org.springframework.validation.BindingResult)
+Mapped "{[/buyer/order/list],methods=[GET]}" onto public com.kzysure.demo.VO.ResultVO<java.util.List<com.kzysure.demo.dto.OrderDTO>> com.kzysure.demo.controller.BuyerOrderController.findList(com.kzysure.demo.form.ListForm)
+Mapped "{[/buyer/order/detail],methods=[GET]}" onto public com.kzysure.demo.VO.ResultVO<com.kzysure.demo.dto.OrderDTO> com.kzysure.demo.controller.BuyerOrderController.finOne(java.lang.String,java.lang.String)
+Mapped "{[/buyer/order/cancel],methods=[POST]}" onto public com.kzysure.demo.VO.ResultVO com.kzysure.demo.controller.BuyerOrderController.cancelOrder(java.lang.String,java.lang.String)
+Mapped "{[/buyer/product/list],methods=[GET]}" onto public com.kzysure.demo.VO.ResultVO com.kzysure.demo.controller.BuyerProductController.list()
+Mapped "{[/fileUpload],methods=[POST],consumes=[multipart/form-data],produces=[application/json]}" onto public com.kzysure.demo.VO.ResultVO com.kzysure.demo.controller.FileUploadController.fileUpload(org.springframework.web.multipart.MultipartFile)
+Mapped "{[/oauth/githubOauth],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.kzysure.demo.controller.GithubOauthController.githubOauth(java.lang.String,java.lang.String,java.util.Map<java.lang.String, java.lang.String>)
+Mapped "{[/pay/create],methods=[GET]}" onto public void com.kzysure.demo.controller.PayController.create(java.lang.String,java.lang.String)
+Mapped "{[/seller/product/list],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.kzysure.demo.controller.ProductController.list(java.lang.Integer,java.lang.Integer,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/seller/loginto],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.kzysure.demo.controller.SellerLoginController.login(java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/seller/denglu],methods=[GET]}" onto public com.kzysure.demo.VO.LoginResponse com.kzysure.demo.controller.SellerLoginController.denglu(java.lang.String,java.lang.String)
+Mapped "{[/seller/order/list],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.kzysure.demo.controller.SellerOrderController.list(java.lang.Integer,java.lang.Integer,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/seller/order/finish],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.kzysure.demo.controller.SellerOrderController.finish(java.lang.String,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/seller/order/detail],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.kzysure.demo.controller.SellerOrderController.detail(java.lang.String,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/seller/order/cancel],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.kzysure.demo.controller.SellerOrderController.cancel(java.lang.String,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/seller/logout],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.kzysure.demo.controller.SellerUserController.logout(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.util.Map<java.lang.String, java.lang.String>)
+Mapped "{[/seller/login],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.kzysure.demo.controller.SellerUserController.login(java.lang.String,java.util.Map<java.lang.String, java.lang.String>,javax.servlet.http.HttpServletResponse)
+Mapped "{[/wechat/userInfo],methods=[GET]}" onto public java.lang.String com.kzysure.demo.controller.WechatController.getUserInfo(java.lang.String,java.lang.String)
+Mapped "{[/wechat/authorize],methods=[GET]}" onto public java.lang.String com.kzysure.demo.controller.WechatController.authorize(java.lang.String)
+Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Detected @ExceptionHandler methods in sellerAuthorizeHandler
+Detected @ExceptionHandler methods in sellerExceptionHandler
+Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+ClassTemplateLoader for Spring macros added to FreeMarker configuration
+Registering beans for JMX exposure on startup
+Initializing ProtocolHandler ["http-nio-8080"]
+Starting ProtocolHandler ["http-nio-8080"]
+Using a shared selector for servlet write/read
+Tomcat started on port(s): 8080 (http)
+Started SellApplication in 15.107 seconds (JVM running for 22.946)
+Initializing Spring FrameworkServlet 'dispatcherServlet'
+FrameworkServlet 'dispatcherServlet': initialization started
+FrameworkServlet 'dispatcherServlet': initialization completed in 46 ms
+HHH000397: Using ASTQueryTranslatorFactory
+Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7a1b4074: startup date [Wed Mar 21 18:11:14 CST 2018]; root of context hierarchy
+Unregistering JMX-exposed beans on shutdown
+Closing JPA EntityManagerFactory for persistence unit 'default'
+HV000001: Hibernate Validator 5.3.5.Final
+Starting SellApplication on kzysuredeMBP with PID 84245 (/Users/kzysure/workspace/Test/sell/target/classes started by kzysure in /Users/kzysure/workspace/Test/sell)
+No active profile set, falling back to default profiles: default
+Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@53f0a4cb: startup date [Wed Mar 21 18:14:27 CST 2018]; root of context hierarchy
+Multiple Spring Data modules found, entering strict repository configuration mode!
+Multiple Spring Data modules found, entering strict repository configuration mode!
+Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.kzysure.demo.repository.OrderMasterRepository.
+Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.kzysure.demo.repository.ProductInfoRepository.
+Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.kzysure.demo.repository.SellerInfoRepository.
+Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.kzysure.demo.repository.OrderDetailRepository.
+Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.kzysure.demo.repository.ProductCategoryRepository.
+JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+Tomcat initialized with port(s): 8080 (http)
+Starting service [Tomcat]
+Starting Servlet Engine: Apache Tomcat/8.5.23
+Initializing Spring embedded WebApplicationContext
+Root WebApplicationContext: initialization completed in 3844 ms
+Mapping servlet: 'dispatcherServlet' to [/]
+Mapping filter: 'characterEncodingFilter' to: [/*]
+Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+Mapping filter: 'httpPutFormContentFilter' to: [/*]
+Mapping filter: 'requestContextFilter' to: [/*]
+Building JPA container EntityManagerFactory for persistence unit 'default'
+HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+HHH000412: Hibernate Core {5.0.12.Final}
+HHH000206: hibernate.properties not found
+HHH000021: Bytecode provider name : javassist
+HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+Initialized JPA EntityManagerFactory for persistence unit 'default'
+Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@53f0a4cb: startup date [Wed Mar 21 18:14:27 CST 2018]; root of context hierarchy
+Mapped "{[/buyer/order/create],methods=[POST]}" onto public com.kzysure.demo.VO.ResultVO<java.util.Map<java.lang.String, java.lang.String>> com.kzysure.demo.controller.BuyerOrderController.createOrder(com.kzysure.demo.form.OrderForm,org.springframework.validation.BindingResult)
+Mapped "{[/buyer/order/list],methods=[GET]}" onto public com.kzysure.demo.VO.ResultVO<java.util.List<com.kzysure.demo.dto.OrderDTO>> com.kzysure.demo.controller.BuyerOrderController.findList(com.kzysure.demo.form.ListForm)
+Mapped "{[/buyer/order/detail],methods=[GET]}" onto public com.kzysure.demo.VO.ResultVO<com.kzysure.demo.dto.OrderDTO> com.kzysure.demo.controller.BuyerOrderController.finOne(java.lang.String,java.lang.String)
+Mapped "{[/buyer/order/cancel],methods=[POST]}" onto public com.kzysure.demo.VO.ResultVO com.kzysure.demo.controller.BuyerOrderController.cancelOrder(java.lang.String,java.lang.String)
+Mapped "{[/buyer/product/list],methods=[GET]}" onto public com.kzysure.demo.VO.ResultVO com.kzysure.demo.controller.BuyerProductController.list()
+Mapped "{[/fileUpload],methods=[POST],consumes=[multipart/form-data],produces=[application/json]}" onto public com.kzysure.demo.VO.ResultVO com.kzysure.demo.controller.FileUploadController.fileUpload(org.springframework.web.multipart.MultipartFile)
+Mapped "{[/oauth/githubOauth],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.kzysure.demo.controller.GithubOauthController.githubOauth(java.lang.String,java.lang.String,java.util.Map<java.lang.String, java.lang.String>)
+Mapped "{[/pay/create],methods=[GET]}" onto public void com.kzysure.demo.controller.PayController.create(java.lang.String,java.lang.String)
+Mapped "{[/seller/product/list],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.kzysure.demo.controller.ProductController.list(java.lang.Integer,java.lang.Integer,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/seller/loginto],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.kzysure.demo.controller.SellerLoginController.login(java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/seller/denglu],methods=[GET]}" onto public com.kzysure.demo.VO.LoginResponse com.kzysure.demo.controller.SellerLoginController.denglu(java.lang.String,java.lang.String)
+Mapped "{[/seller/order/list],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.kzysure.demo.controller.SellerOrderController.list(java.lang.Integer,java.lang.Integer,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/seller/order/finish],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.kzysure.demo.controller.SellerOrderController.finish(java.lang.String,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/seller/order/detail],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.kzysure.demo.controller.SellerOrderController.detail(java.lang.String,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/seller/order/cancel],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.kzysure.demo.controller.SellerOrderController.cancel(java.lang.String,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/seller/login],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.kzysure.demo.controller.SellerUserController.login(java.lang.String,java.util.Map<java.lang.String, java.lang.String>,javax.servlet.http.HttpServletResponse)
+Mapped "{[/seller/logout],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.kzysure.demo.controller.SellerUserController.logout(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.util.Map<java.lang.String, java.lang.String>)
+Mapped "{[/wechat/userInfo],methods=[GET]}" onto public java.lang.String com.kzysure.demo.controller.WechatController.getUserInfo(java.lang.String,java.lang.String)
+Mapped "{[/wechat/authorize],methods=[GET]}" onto public java.lang.String com.kzysure.demo.controller.WechatController.authorize(java.lang.String)
+Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Detected @ExceptionHandler methods in sellerAuthorizeHandler
+Detected @ExceptionHandler methods in sellerExceptionHandler
+Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+ClassTemplateLoader for Spring macros added to FreeMarker configuration
+Registering beans for JMX exposure on startup
+Initializing ProtocolHandler ["http-nio-8080"]
+Starting ProtocolHandler ["http-nio-8080"]
+Using a shared selector for servlet write/read
+Tomcat started on port(s): 8080 (http)
+Started SellApplication in 12.517 seconds (JVM running for 20.383)
+Initializing Spring FrameworkServlet 'dispatcherServlet'
+FrameworkServlet 'dispatcherServlet': initialization started
+FrameworkServlet 'dispatcherServlet': initialization completed in 35 ms
+HHH000397: Using ASTQueryTranslatorFactory
+【登陆校验】，Cookie中查不到token
+Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@53f0a4cb: startup date [Wed Mar 21 18:14:27 CST 2018]; root of context hierarchy
+Unregistering JMX-exposed beans on shutdown
+Closing JPA EntityManagerFactory for persistence unit 'default'
+HV000001: Hibernate Validator 5.3.5.Final
+Starting SellApplication on kzysuredeMacBook-Pro.local with PID 85997 (/Users/kzysure/workspace/Test/sell/target/classes started by kzysure in /Users/kzysure/workspace/Test/sell)
+No active profile set, falling back to default profiles: default
+Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4d722ac9: startup date [Wed Mar 21 22:22:38 CST 2018]; root of context hierarchy
+Multiple Spring Data modules found, entering strict repository configuration mode!
+Multiple Spring Data modules found, entering strict repository configuration mode!
+Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.kzysure.demo.repository.OrderMasterRepository.
+Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.kzysure.demo.repository.ProductInfoRepository.
+Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.kzysure.demo.repository.SellerInfoRepository.
+Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.kzysure.demo.repository.OrderDetailRepository.
+Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.kzysure.demo.repository.ProductCategoryRepository.
+JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+Tomcat initialized with port(s): 8080 (http)
+Starting service [Tomcat]
+Starting Servlet Engine: Apache Tomcat/8.5.23
+Initializing Spring embedded WebApplicationContext
+Root WebApplicationContext: initialization completed in 3440 ms
+Mapping servlet: 'dispatcherServlet' to [/]
+Mapping filter: 'characterEncodingFilter' to: [/*]
+Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+Mapping filter: 'httpPutFormContentFilter' to: [/*]
+Mapping filter: 'requestContextFilter' to: [/*]
+Building JPA container EntityManagerFactory for persistence unit 'default'
+HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+HHH000412: Hibernate Core {5.0.12.Final}
+HHH000206: hibernate.properties not found
+HHH000021: Bytecode provider name : javassist
+HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+Initialized JPA EntityManagerFactory for persistence unit 'default'
+Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4d722ac9: startup date [Wed Mar 21 22:22:38 CST 2018]; root of context hierarchy
+Mapped "{[/buyer/order/create],methods=[POST]}" onto public com.kzysure.demo.VO.ResultVO<java.util.Map<java.lang.String, java.lang.String>> com.kzysure.demo.controller.BuyerOrderController.createOrder(com.kzysure.demo.form.OrderForm,org.springframework.validation.BindingResult)
+Mapped "{[/buyer/order/list],methods=[GET]}" onto public com.kzysure.demo.VO.ResultVO<java.util.List<com.kzysure.demo.dto.OrderDTO>> com.kzysure.demo.controller.BuyerOrderController.findList(com.kzysure.demo.form.ListForm)
+Mapped "{[/buyer/order/detail],methods=[GET]}" onto public com.kzysure.demo.VO.ResultVO<com.kzysure.demo.dto.OrderDTO> com.kzysure.demo.controller.BuyerOrderController.finOne(java.lang.String,java.lang.String)
+Mapped "{[/buyer/order/cancel],methods=[POST]}" onto public com.kzysure.demo.VO.ResultVO com.kzysure.demo.controller.BuyerOrderController.cancelOrder(java.lang.String,java.lang.String)
+Mapped "{[/buyer/product/list],methods=[GET]}" onto public com.kzysure.demo.VO.ResultVO com.kzysure.demo.controller.BuyerProductController.list()
+Mapped "{[/fileUpload],methods=[POST],consumes=[multipart/form-data],produces=[application/json]}" onto public com.kzysure.demo.VO.ResultVO com.kzysure.demo.controller.FileUploadController.fileUpload(org.springframework.web.multipart.MultipartFile)
+Mapped "{[/oauth/githubOauth],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.kzysure.demo.controller.GithubOauthController.githubOauth(java.lang.String,java.lang.String,java.util.Map<java.lang.String, java.lang.String>)
+Mapped "{[/pay/create],methods=[GET]}" onto public void com.kzysure.demo.controller.PayController.create(java.lang.String,java.lang.String)
+Mapped "{[/seller/product/list],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.kzysure.demo.controller.ProductController.list(java.lang.Integer,java.lang.Integer,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/seller/denglu],methods=[GET]}" onto public com.kzysure.demo.VO.LoginResponse com.kzysure.demo.controller.SellerLoginController.denglu(java.lang.String,java.lang.String)
+Mapped "{[/seller/loginto],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.kzysure.demo.controller.SellerLoginController.login(java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/seller/order/list],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.kzysure.demo.controller.SellerOrderController.list(java.lang.Integer,java.lang.Integer,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/seller/order/cancel],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.kzysure.demo.controller.SellerOrderController.cancel(java.lang.String,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/seller/order/detail],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.kzysure.demo.controller.SellerOrderController.detail(java.lang.String,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/seller/order/finish],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.kzysure.demo.controller.SellerOrderController.finish(java.lang.String,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/seller/login],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.kzysure.demo.controller.SellerUserController.login(java.lang.String,java.util.Map<java.lang.String, java.lang.String>,javax.servlet.http.HttpServletResponse)
+Mapped "{[/seller/logout],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.kzysure.demo.controller.SellerUserController.logout(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.util.Map<java.lang.String, java.lang.String>)
+Mapped "{[/wechat/userInfo],methods=[GET]}" onto public java.lang.String com.kzysure.demo.controller.WechatController.getUserInfo(java.lang.String,java.lang.String)
+Mapped "{[/wechat/authorize],methods=[GET]}" onto public java.lang.String com.kzysure.demo.controller.WechatController.authorize(java.lang.String)
+Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Detected @ExceptionHandler methods in sellerAuthorizeHandler
+Detected @ExceptionHandler methods in sellerExceptionHandler
+Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+ClassTemplateLoader for Spring macros added to FreeMarker configuration
+Registering beans for JMX exposure on startup
+Initializing ProtocolHandler ["http-nio-8080"]
+Starting ProtocolHandler ["http-nio-8080"]
+Using a shared selector for servlet write/read
+Tomcat started on port(s): 8080 (http)
+Started SellApplication in 30.778 seconds (JVM running for 47.582)
+Initializing Spring FrameworkServlet 'dispatcherServlet'
+FrameworkServlet 'dispatcherServlet': initialization started
+FrameworkServlet 'dispatcherServlet': initialization completed in 30 ms
+HHH000397: Using ASTQueryTranslatorFactory
+Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4d722ac9: startup date [Wed Mar 21 22:22:38 CST 2018]; root of context hierarchy
+Unregistering JMX-exposed beans on shutdown
+Closing JPA EntityManagerFactory for persistence unit 'default'
+HV000001: Hibernate Validator 5.3.5.Final
+Starting SellApplication on kzysuredeMacBook-Pro.local with PID 86141 (/Users/kzysure/workspace/Test/sell/target/classes started by kzysure in /Users/kzysure/workspace/Test/sell)
+No active profile set, falling back to default profiles: default
+Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@53f0a4cb: startup date [Wed Mar 21 22:35:37 CST 2018]; root of context hierarchy
+Multiple Spring Data modules found, entering strict repository configuration mode!
+Multiple Spring Data modules found, entering strict repository configuration mode!
+Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.kzysure.demo.repository.OrderMasterRepository.
+Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.kzysure.demo.repository.ProductInfoRepository.
+Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.kzysure.demo.repository.SellerInfoRepository.
+Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.kzysure.demo.repository.OrderDetailRepository.
+Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.kzysure.demo.repository.ProductCategoryRepository.
+JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+Tomcat initialized with port(s): 8080 (http)
+Starting service [Tomcat]
+Starting Servlet Engine: Apache Tomcat/8.5.23
+Initializing Spring embedded WebApplicationContext
+Root WebApplicationContext: initialization completed in 3391 ms
+Mapping servlet: 'dispatcherServlet' to [/]
+Mapping filter: 'characterEncodingFilter' to: [/*]
+Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+Mapping filter: 'httpPutFormContentFilter' to: [/*]
+Mapping filter: 'requestContextFilter' to: [/*]
+Building JPA container EntityManagerFactory for persistence unit 'default'
+HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+HHH000412: Hibernate Core {5.0.12.Final}
+HHH000206: hibernate.properties not found
+HHH000021: Bytecode provider name : javassist
+HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+Initialized JPA EntityManagerFactory for persistence unit 'default'
+Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@53f0a4cb: startup date [Wed Mar 21 22:35:37 CST 2018]; root of context hierarchy
+Mapped "{[/buyer/order/create],methods=[POST]}" onto public com.kzysure.demo.VO.ResultVO<java.util.Map<java.lang.String, java.lang.String>> com.kzysure.demo.controller.BuyerOrderController.createOrder(com.kzysure.demo.form.OrderForm,org.springframework.validation.BindingResult)
+Mapped "{[/buyer/order/list],methods=[GET]}" onto public com.kzysure.demo.VO.ResultVO<java.util.List<com.kzysure.demo.dto.OrderDTO>> com.kzysure.demo.controller.BuyerOrderController.findList(com.kzysure.demo.form.ListForm)
+Mapped "{[/buyer/order/detail],methods=[GET]}" onto public com.kzysure.demo.VO.ResultVO<com.kzysure.demo.dto.OrderDTO> com.kzysure.demo.controller.BuyerOrderController.finOne(java.lang.String,java.lang.String)
+Mapped "{[/buyer/order/cancel],methods=[POST]}" onto public com.kzysure.demo.VO.ResultVO com.kzysure.demo.controller.BuyerOrderController.cancelOrder(java.lang.String,java.lang.String)
+Mapped "{[/buyer/product/list],methods=[GET]}" onto public com.kzysure.demo.VO.ResultVO com.kzysure.demo.controller.BuyerProductController.list()
+Mapped "{[/fileUpload],methods=[POST],consumes=[multipart/form-data],produces=[application/json]}" onto public com.kzysure.demo.VO.ResultVO com.kzysure.demo.controller.FileUploadController.fileUpload(org.springframework.web.multipart.MultipartFile)
+Mapped "{[/oauth/githubOauth],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.kzysure.demo.controller.GithubOauthController.githubOauth(java.lang.String,java.lang.String,java.util.Map<java.lang.String, java.lang.String>)
+Mapped "{[/pay/create],methods=[GET]}" onto public void com.kzysure.demo.controller.PayController.create(java.lang.String,java.lang.String)
+Mapped "{[/seller/product/list],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.kzysure.demo.controller.ProductController.list(java.lang.Integer,java.lang.Integer,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/seller/denglu],methods=[GET]}" onto public com.kzysure.demo.VO.LoginResponse com.kzysure.demo.controller.SellerLoginController.denglu(java.lang.String,java.lang.String)
+Mapped "{[/seller/loginto],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.kzysure.demo.controller.SellerLoginController.login(java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/seller/order/list],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.kzysure.demo.controller.SellerOrderController.list(java.lang.Integer,java.lang.Integer,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/seller/order/detail],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.kzysure.demo.controller.SellerOrderController.detail(java.lang.String,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/seller/order/finish],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.kzysure.demo.controller.SellerOrderController.finish(java.lang.String,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/seller/order/cancel],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.kzysure.demo.controller.SellerOrderController.cancel(java.lang.String,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/seller/login],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.kzysure.demo.controller.SellerUserController.login(java.lang.String,java.util.Map<java.lang.String, java.lang.String>,javax.servlet.http.HttpServletResponse)
+Mapped "{[/seller/logout],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.kzysure.demo.controller.SellerUserController.logout(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.util.Map<java.lang.String, java.lang.String>)
+Mapped "{[/wechat/userInfo],methods=[GET]}" onto public java.lang.String com.kzysure.demo.controller.WechatController.getUserInfo(java.lang.String,java.lang.String)
+Mapped "{[/wechat/authorize],methods=[GET]}" onto public java.lang.String com.kzysure.demo.controller.WechatController.authorize(java.lang.String)
+Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Detected @ExceptionHandler methods in sellerAuthorizeHandler
+Detected @ExceptionHandler methods in sellerExceptionHandler
+Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+ClassTemplateLoader for Spring macros added to FreeMarker configuration
+Registering beans for JMX exposure on startup
+Initializing ProtocolHandler ["http-nio-8080"]
+Starting ProtocolHandler ["http-nio-8080"]
+Using a shared selector for servlet write/read
+Tomcat started on port(s): 8080 (http)
+Started SellApplication in 18.914 seconds (JVM running for 34.427)
+Initializing Spring FrameworkServlet 'dispatcherServlet'
+FrameworkServlet 'dispatcherServlet': initialization started
+FrameworkServlet 'dispatcherServlet': initialization completed in 26 ms
+HHH000397: Using ASTQueryTranslatorFactory
+【登陆校验】，Cookie中查不到token
+
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/Users/kzysure/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/Users/kzysure/.m2/repository/org/json/json/20140107/json-20140107.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behaviour
+
+HV000001: Hibernate Validator 5.3.5.Final
+Starting ProductInfoRepositoryTest on kzysuredeMacBook-Pro.local with PID 86378 (started by kzysure in /Users/kzysure/workspace/Test/sell)
+No active profile set, falling back to default profiles: default
+Refreshing org.springframework.web.context.support.GenericWebApplicationContext@6475472c: startup date [Wed Mar 21 22:48:31 CST 2018]; root of context hierarchy
+Multiple Spring Data modules found, entering strict repository configuration mode!
+Multiple Spring Data modules found, entering strict repository configuration mode!
+Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.kzysure.demo.repository.OrderMasterRepository.
+Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.kzysure.demo.repository.ProductInfoRepository.
+Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.kzysure.demo.repository.SellerInfoRepository.
+Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.kzysure.demo.repository.OrderDetailRepository.
+Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.kzysure.demo.repository.ProductCategoryRepository.
+JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+Building JPA container EntityManagerFactory for persistence unit 'default'
+HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+HHH000412: Hibernate Core {5.0.12.Final}
+HHH000206: hibernate.properties not found
+HHH000021: Bytecode provider name : javassist
+HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+Initialized JPA EntityManagerFactory for persistence unit 'default'
+Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@6475472c: startup date [Wed Mar 21 22:48:31 CST 2018]; root of context hierarchy
+Mapped "{[/buyer/order/create],methods=[POST]}" onto public com.kzysure.demo.VO.ResultVO<java.util.Map<java.lang.String, java.lang.String>> com.kzysure.demo.controller.BuyerOrderController.createOrder(com.kzysure.demo.form.OrderForm,org.springframework.validation.BindingResult)
+Mapped "{[/buyer/order/list],methods=[GET]}" onto public com.kzysure.demo.VO.ResultVO<java.util.List<com.kzysure.demo.dto.OrderDTO>> com.kzysure.demo.controller.BuyerOrderController.findList(com.kzysure.demo.form.ListForm)
+Mapped "{[/buyer/order/detail],methods=[GET]}" onto public com.kzysure.demo.VO.ResultVO<com.kzysure.demo.dto.OrderDTO> com.kzysure.demo.controller.BuyerOrderController.finOne(java.lang.String,java.lang.String)
+Mapped "{[/buyer/order/cancel],methods=[POST]}" onto public com.kzysure.demo.VO.ResultVO com.kzysure.demo.controller.BuyerOrderController.cancelOrder(java.lang.String,java.lang.String)
+Mapped "{[/buyer/product/list],methods=[GET]}" onto public com.kzysure.demo.VO.ResultVO com.kzysure.demo.controller.BuyerProductController.list()
+Mapped "{[/fileUpload],methods=[POST],consumes=[multipart/form-data],produces=[application/json]}" onto public com.kzysure.demo.VO.ResultVO com.kzysure.demo.controller.FileUploadController.fileUpload(org.springframework.web.multipart.MultipartFile)
+Mapped "{[/oauth/githubOauth],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.kzysure.demo.controller.GithubOauthController.githubOauth(java.lang.String,java.lang.String,java.util.Map<java.lang.String, java.lang.String>)
+Mapped "{[/pay/create],methods=[GET]}" onto public void com.kzysure.demo.controller.PayController.create(java.lang.String,java.lang.String)
+Mapped "{[/seller/product/list],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.kzysure.demo.controller.ProductController.list(java.lang.Integer,java.lang.Integer,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/seller/loginto],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.kzysure.demo.controller.SellerLoginController.login(java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/seller/denglu],methods=[GET]}" onto public com.kzysure.demo.VO.LoginResponse com.kzysure.demo.controller.SellerLoginController.denglu(java.lang.String,java.lang.String)
+Mapped "{[/seller/order/list],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.kzysure.demo.controller.SellerOrderController.list(java.lang.Integer,java.lang.Integer,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/seller/order/finish],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.kzysure.demo.controller.SellerOrderController.finish(java.lang.String,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/seller/order/cancel],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.kzysure.demo.controller.SellerOrderController.cancel(java.lang.String,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/seller/order/detail],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.kzysure.demo.controller.SellerOrderController.detail(java.lang.String,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/seller/login],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.kzysure.demo.controller.SellerUserController.login(java.lang.String,java.util.Map<java.lang.String, java.lang.String>,javax.servlet.http.HttpServletResponse)
+Mapped "{[/seller/logout],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.kzysure.demo.controller.SellerUserController.logout(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.util.Map<java.lang.String, java.lang.String>)
+Mapped "{[/wechat/userInfo],methods=[GET]}" onto public java.lang.String com.kzysure.demo.controller.WechatController.getUserInfo(java.lang.String,java.lang.String)
+Mapped "{[/wechat/authorize],methods=[GET]}" onto public java.lang.String com.kzysure.demo.controller.WechatController.authorize(java.lang.String)
+Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Detected @ExceptionHandler methods in sellerAuthorizeHandler
+Detected @ExceptionHandler methods in sellerExceptionHandler
+Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+ClassTemplateLoader for Spring macros added to FreeMarker configuration
+Started ProductInfoRepositoryTest in 30.691 seconds (JVM running for 33.094)
+HHH000397: Using ASTQueryTranslatorFactory
+Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.kzysure.demo.repository.SellerInfoRepositoryTest], using SpringBootContextLoader
+Could not detect default resource locations for test class [com.kzysure.demo.repository.SellerInfoRepositoryTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+Could not detect default configuration classes for test class [com.kzysure.demo.repository.SellerInfoRepositoryTest]: SellerInfoRepositoryTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+Found @SpringBootConfiguration com.kzysure.demo.SellApplication for test class com.kzysure.demo.repository.SellerInfoRepositoryTest
+Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@729a9c3d, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@574327ed, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@4c7f2fdb, org.springframework.test.context.support.DirtiesContextTestExecutionListener@1b5cf611, org.springframework.test.context.transaction.TransactionalTestExecutionListener@3d01ea33, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@73b3ce31, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@4687366b, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@3a17acd4, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@8f589d7, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@65da1cbe, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@1a914a00, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@1d67348a]
+Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.kzysure.demo.repository.OrderDetailRepositoryTest], using SpringBootContextLoader
+Could not detect default resource locations for test class [com.kzysure.demo.repository.OrderDetailRepositoryTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+Could not detect default configuration classes for test class [com.kzysure.demo.repository.OrderDetailRepositoryTest]: OrderDetailRepositoryTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+Found @SpringBootConfiguration com.kzysure.demo.SellApplication for test class com.kzysure.demo.repository.OrderDetailRepositoryTest
+Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@4a14f7d7, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@66596c4c, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@15ce261, org.springframework.test.context.support.DirtiesContextTestExecutionListener@54c3e686, org.springframework.test.context.transaction.TransactionalTestExecutionListener@39840986, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@141229f6, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@723b8eff, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@3987a1e8, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@20d65767, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@250e8712, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@becb93a, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@f60c14e]
+Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.kzysure.demo.repository.ProductCategoryRepositoryTest], using SpringBootContextLoader
+Could not detect default resource locations for test class [com.kzysure.demo.repository.ProductCategoryRepositoryTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+Could not detect default configuration classes for test class [com.kzysure.demo.repository.ProductCategoryRepositoryTest]: ProductCategoryRepositoryTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+Found @SpringBootConfiguration com.kzysure.demo.SellApplication for test class com.kzysure.demo.repository.ProductCategoryRepositoryTest
+Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@126d8659, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@28654aff, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@5dfec221, org.springframework.test.context.support.DirtiesContextTestExecutionListener@5e9cb95, org.springframework.test.context.transaction.TransactionalTestExecutionListener@7bc8da3f, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@7978550b, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@52bc6fcf, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@1942a36e, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@24668b5b, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@1f8d42d1, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@2e7e84f8, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@22ab1b8a]
+Began transaction (1) for test context [DefaultTestContext@1bf52f10 testClass = ProductCategoryRepositoryTest, testInstance = com.kzysure.demo.repository.ProductCategoryRepositoryTest@6148827c, testMethod = saveTest@ProductCategoryRepositoryTest, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@320770d7 testClass = ProductCategoryRepositoryTest, locations = '{}', classes = '{class com.kzysure.demo.SellApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.context.SpringBootTestContextCustomizer@631330c, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@3234e239, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@fad74ee, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@262b2c86], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]]]; transaction manager [org.springframework.orm.jpa.JpaTransactionManager@563c3aca]; rollback [true]
+Rolled back transaction for test context [DefaultTestContext@1bf52f10 testClass = ProductCategoryRepositoryTest, testInstance = com.kzysure.demo.repository.ProductCategoryRepositoryTest@6148827c, testMethod = saveTest@ProductCategoryRepositoryTest, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@320770d7 testClass = ProductCategoryRepositoryTest, locations = '{}', classes = '{class com.kzysure.demo.SellApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.context.SpringBootTestContextCustomizer@631330c, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@3234e239, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@fad74ee, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@262b2c86], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]]].
+Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.kzysure.demo.repository.OrderMasterRepositoryTest], using SpringBootContextLoader
+Could not detect default resource locations for test class [com.kzysure.demo.repository.OrderMasterRepositoryTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+Could not detect default configuration classes for test class [com.kzysure.demo.repository.OrderMasterRepositoryTest]: OrderMasterRepositoryTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+Found @SpringBootConfiguration com.kzysure.demo.SellApplication for test class com.kzysure.demo.repository.OrderMasterRepositoryTest
+Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@1d167630, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@3bc18fec, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@1eee9b78, org.springframework.test.context.support.DirtiesContextTestExecutionListener@36762234, org.springframework.test.context.transaction.TransactionalTestExecutionListener@18ff753c, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@2ff62720, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@45295cfd, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@42c9b1ee, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@217c6a1e, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@3fad8636, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@306cfb8a, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@3fa57aa8]
+Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.kzysure.demo.utils.OssUtilTest], using SpringBootContextLoader
+Could not detect default resource locations for test class [com.kzysure.demo.utils.OssUtilTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+Could not detect default configuration classes for test class [com.kzysure.demo.utils.OssUtilTest]: OssUtilTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+Found @SpringBootConfiguration com.kzysure.demo.SellApplication for test class com.kzysure.demo.utils.OssUtilTest
+Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@121dac1a, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@6d946eee, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@23dc70c1, org.springframework.test.context.support.DirtiesContextTestExecutionListener@53b907d9, org.springframework.test.context.transaction.TransactionalTestExecutionListener@2c3b0cc8, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@6296e4bf, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@220cda54, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@39109603, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@4d3990a5, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@18df26a1, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@5c459194, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@61d8a491]
+[Server]Unable to execute HTTP request: The requested bucket name is not available. The bucket namespace is shared by all users of the system. Please select a different name and try again.
+[ErrorCode]: BucketAlreadyExists
+[RequestId]: 5AB270D0EA8726F51111C5B7
+[HostId]: weilai-takeout.oss-cn-beijing.aliyuncs.com
+[ResponseError]:
+<?xml version="1.0" encoding="UTF-8"?>
+<Error>
+  <Code>BucketAlreadyExists</Code>
+  <Message>The requested bucket name is not available. The bucket namespace is shared by all users of the system. Please select a different name and try again.</Message>
+  <RequestId>5AB270D0EA8726F51111C5B7</RequestId>
+  <HostId>weilai-takeout.oss-cn-beijing.aliyuncs.com</HostId>
+  <BucketName>weilai-takeout</BucketName>
+</Error>
+
+[Server]Unable to execute HTTP request: The bucket you tried to delete is not empty.
+[ErrorCode]: BucketNotEmpty
+[RequestId]: 5AB270D1CE6589B05846B678
+[HostId]: weilai-takeout.oss-cn-beijing.aliyuncs.com
+[ResponseError]:
+<?xml version="1.0" encoding="UTF-8"?>
+<Error>
+  <Code>BucketNotEmpty</Code>
+  <Message>The bucket you tried to delete is not empty.</Message>
+  <RequestId>5AB270D1CE6589B05846B678</RequestId>
+  <HostId>weilai-takeout.oss-cn-beijing.aliyuncs.com</HostId>
+  <BucketName>weilai-takeout</BucketName>
+</Error>
+
+上传后的文件MD5数字唯一签名:9147C3AD425588B886EBB33BE76C01CA
+删除weilai-takeout下的文件datas/image/csdn_cs_qr.png成功
+Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.kzysure.demo.LoggerTest], using SpringBootContextLoader
+Could not detect default resource locations for test class [com.kzysure.demo.LoggerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+Could not detect default configuration classes for test class [com.kzysure.demo.LoggerTest]: LoggerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+Found @SpringBootConfiguration com.kzysure.demo.SellApplication for test class com.kzysure.demo.LoggerTest
+Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@48da5106, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@31cddb11, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@510bd87a, org.springframework.test.context.support.DirtiesContextTestExecutionListener@3d213a2b, org.springframework.test.context.transaction.TransactionalTestExecutionListener@27691ee8, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@78a34c47, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@77648321, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@43201f84, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@2c51c756, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@4ef277ef, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@1ddc889b, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@5ec3689b]
+info
+警告
+Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.kzysure.demo.service.impl.ProductInfoServiceImplTest], using SpringBootContextLoader
+Could not detect default resource locations for test class [com.kzysure.demo.service.impl.ProductInfoServiceImplTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+Could not detect default configuration classes for test class [com.kzysure.demo.service.impl.ProductInfoServiceImplTest]: ProductInfoServiceImplTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+Found @SpringBootConfiguration com.kzysure.demo.SellApplication for test class com.kzysure.demo.service.impl.ProductInfoServiceImplTest
+Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@2748bd6c, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@64a4739, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@7ab3f194, org.springframework.test.context.support.DirtiesContextTestExecutionListener@613a608e, org.springframework.test.context.transaction.TransactionalTestExecutionListener@37b1218, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@575cfec1, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@32068aef, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@8ab231, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@5b3a8bea, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@6ba0dcba, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@6d7772d3, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@38394e76]
+Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.kzysure.demo.service.impl.CategoryServiceImplTest], using SpringBootContextLoader
+Could not detect default resource locations for test class [com.kzysure.demo.service.impl.CategoryServiceImplTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+Could not detect default configuration classes for test class [com.kzysure.demo.service.impl.CategoryServiceImplTest]: CategoryServiceImplTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+Found @SpringBootConfiguration com.kzysure.demo.SellApplication for test class com.kzysure.demo.service.impl.CategoryServiceImplTest
+Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@10e4ce98, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@10466c55, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@2a5ed225, org.springframework.test.context.support.DirtiesContextTestExecutionListener@2a525f88, org.springframework.test.context.transaction.TransactionalTestExecutionListener@1cf4d454, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@3ff3275b, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@63e0057a, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@5b76b891, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@611a91df, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@47f5ab58, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@245dbd09, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@4a013b23]
+Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.kzysure.demo.service.impl.OrderServiceImplTest], using SpringBootContextLoader
+Could not detect default resource locations for test class [com.kzysure.demo.service.impl.OrderServiceImplTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+Could not detect default configuration classes for test class [com.kzysure.demo.service.impl.OrderServiceImplTest]: OrderServiceImplTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+Found @SpringBootConfiguration com.kzysure.demo.SellApplication for test class com.kzysure.demo.service.impl.OrderServiceImplTest
+Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@63e648a0, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@6a6a3fc4, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@48cbe1c9, org.springframework.test.context.support.DirtiesContextTestExecutionListener@67e628b, org.springframework.test.context.transaction.TransactionalTestExecutionListener@578c99ac, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@6ca30886, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@7bf16972, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@eee26bd, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@3d1c8f35, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@498f5728, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@39451d92, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@46610fc9]
+Began transaction (1) for test context [DefaultTestContext@5655278d testClass = OrderServiceImplTest, testInstance = com.kzysure.demo.service.impl.OrderServiceImplTest@2dd46693, testMethod = paidOrder@OrderServiceImplTest, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@1fdd5517 testClass = OrderServiceImplTest, locations = '{}', classes = '{class com.kzysure.demo.SellApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.context.SpringBootTestContextCustomizer@631330c, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@3234e239, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@fad74ee, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@262b2c86], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]]]; transaction manager [org.springframework.orm.jpa.JpaTransactionManager@563c3aca]; rollback [true]
+Rolled back transaction for test context [DefaultTestContext@5655278d testClass = OrderServiceImplTest, testInstance = com.kzysure.demo.service.impl.OrderServiceImplTest@2dd46693, testMethod = paidOrder@OrderServiceImplTest, testException = com.kzysure.demo.exception.SellException: 订单不存在, mergedContextConfiguration = [WebMergedContextConfiguration@1fdd5517 testClass = OrderServiceImplTest, locations = '{}', classes = '{class com.kzysure.demo.SellApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.context.SpringBootTestContextCustomizer@631330c, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@3234e239, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@fad74ee, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@262b2c86], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]]].
+Began transaction (1) for test context [DefaultTestContext@5655278d testClass = OrderServiceImplTest, testInstance = com.kzysure.demo.service.impl.OrderServiceImplTest@71a7cf7c, testMethod = OrderCancel@OrderServiceImplTest, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@1fdd5517 testClass = OrderServiceImplTest, locations = '{}', classes = '{class com.kzysure.demo.SellApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.context.SpringBootTestContextCustomizer@631330c, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@3234e239, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@fad74ee, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@262b2c86], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]]]; transaction manager [org.springframework.orm.jpa.JpaTransactionManager@563c3aca]; rollback [true]
+Rolled back transaction for test context [DefaultTestContext@5655278d testClass = OrderServiceImplTest, testInstance = com.kzysure.demo.service.impl.OrderServiceImplTest@71a7cf7c, testMethod = OrderCancel@OrderServiceImplTest, testException = java.lang.IllegalArgumentException: Source must not be null, mergedContextConfiguration = [WebMergedContextConfiguration@1fdd5517 testClass = OrderServiceImplTest, locations = '{}', classes = '{class com.kzysure.demo.SellApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.context.SpringBootTestContextCustomizer@631330c, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@3234e239, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@fad74ee, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@262b2c86], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]]].
+数据传输层数据：[]
+Began transaction (1) for test context [DefaultTestContext@5655278d testClass = OrderServiceImplTest, testInstance = com.kzysure.demo.service.impl.OrderServiceImplTest@2823b7c5, testMethod = finishOrder@OrderServiceImplTest, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@1fdd5517 testClass = OrderServiceImplTest, locations = '{}', classes = '{class com.kzysure.demo.SellApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.context.SpringBootTestContextCustomizer@631330c, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@3234e239, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@fad74ee, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@262b2c86], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]]]; transaction manager [org.springframework.orm.jpa.JpaTransactionManager@563c3aca]; rollback [true]
+Rolled back transaction for test context [DefaultTestContext@5655278d testClass = OrderServiceImplTest, testInstance = com.kzysure.demo.service.impl.OrderServiceImplTest@2823b7c5, testMethod = finishOrder@OrderServiceImplTest, testException = com.kzysure.demo.exception.SellException: 订单不存在, mergedContextConfiguration = [WebMergedContextConfiguration@1fdd5517 testClass = OrderServiceImplTest, locations = '{}', classes = '{class com.kzysure.demo.SellApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.context.SpringBootTestContextCustomizer@631330c, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@3234e239, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@fad74ee, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@262b2c86], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]]].
+Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.kzysure.demo.service.impl.SellerServiceImplTest], using SpringBootContextLoader
+Could not detect default resource locations for test class [com.kzysure.demo.service.impl.SellerServiceImplTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+Could not detect default configuration classes for test class [com.kzysure.demo.service.impl.SellerServiceImplTest]: SellerServiceImplTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+Found @SpringBootConfiguration com.kzysure.demo.SellApplication for test class com.kzysure.demo.service.impl.SellerServiceImplTest
+Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@3c205259, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@5bc40f5d, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@20923380, org.springframework.test.context.support.DirtiesContextTestExecutionListener@5b2c41f9, org.springframework.test.context.transaction.TransactionalTestExecutionListener@6520625f, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@1ee52741, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@2f5a092e, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@1640a6b5, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@70940cb8, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@47fce2c4, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@3810806c, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@2b76ecd5]
+Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.kzysure.demo.service.impl.OauthServiceImplTest], using SpringBootContextLoader
+Could not detect default resource locations for test class [com.kzysure.demo.service.impl.OauthServiceImplTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+Could not detect default configuration classes for test class [com.kzysure.demo.service.impl.OauthServiceImplTest]: OauthServiceImplTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+Found @SpringBootConfiguration com.kzysure.demo.SellApplication for test class com.kzysure.demo.service.impl.OauthServiceImplTest
+Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@2cd31214, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@594f508f, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@6b6939e1, org.springframework.test.context.support.DirtiesContextTestExecutionListener@5d32f5db, org.springframework.test.context.transaction.TransactionalTestExecutionListener@69c51fdb, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@4aadf144, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@68a97fc1, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@227fc322, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@63053b71, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@4687c184, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@65f3f9e2, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@394950ad]
+Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.kzysure.demo.SellApplicationTests], using SpringBootContextLoader
+Could not detect default resource locations for test class [com.kzysure.demo.SellApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+Could not detect default configuration classes for test class [com.kzysure.demo.SellApplicationTests]: SellApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+Found @SpringBootConfiguration com.kzysure.demo.SellApplication for test class com.kzysure.demo.SellApplicationTests
+Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@4a977146, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@41dc34c8, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@402c415e, org.springframework.test.context.support.DirtiesContextTestExecutionListener@4e322108, org.springframework.test.context.transaction.TransactionalTestExecutionListener@3f5e64c9, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@1f847d9e, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@3d00e981, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@6265a548, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@2e51ede1, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@12051d38, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@28f3a218, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@67730dab]
+Closing org.springframework.web.context.support.GenericWebApplicationContext@6475472c: startup date [Wed Mar 21 22:48:31 CST 2018]; root of context hierarchy
+Closing JPA EntityManagerFactory for persistence unit 'default'
+Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@53f0a4cb: startup date [Wed Mar 21 22:35:37 CST 2018]; root of context hierarchy
+Unregistering JMX-exposed beans on shutdown
+Closing JPA EntityManagerFactory for persistence unit 'default'
+HV000001: Hibernate Validator 5.3.5.Final
+Starting SellApplication on kzysuredeMacBook-Pro.local with PID 86418 (/Users/kzysure/workspace/Test/sell/target/classes started by kzysure in /Users/kzysure/workspace/Test/sell)
+No active profile set, falling back to default profiles: default
+Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@77a7cf58: startup date [Wed Mar 21 22:51:34 CST 2018]; root of context hierarchy
+Multiple Spring Data modules found, entering strict repository configuration mode!
+Multiple Spring Data modules found, entering strict repository configuration mode!
+Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.kzysure.demo.repository.OrderMasterRepository.
+Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.kzysure.demo.repository.ProductInfoRepository.
+Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.kzysure.demo.repository.SellerInfoRepository.
+Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.kzysure.demo.repository.OrderDetailRepository.
+Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.kzysure.demo.repository.ProductCategoryRepository.
+JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+Tomcat initialized with port(s): 8080 (http)
+Starting service [Tomcat]
+Starting Servlet Engine: Apache Tomcat/8.5.23
+Initializing Spring embedded WebApplicationContext
+Root WebApplicationContext: initialization completed in 3211 ms
+Mapping servlet: 'dispatcherServlet' to [/]
+Mapping filter: 'characterEncodingFilter' to: [/*]
+Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+Mapping filter: 'httpPutFormContentFilter' to: [/*]
+Mapping filter: 'requestContextFilter' to: [/*]
+Building JPA container EntityManagerFactory for persistence unit 'default'
+HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+HHH000412: Hibernate Core {5.0.12.Final}
+HHH000206: hibernate.properties not found
+HHH000021: Bytecode provider name : javassist
+HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+Initialized JPA EntityManagerFactory for persistence unit 'default'
+Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@77a7cf58: startup date [Wed Mar 21 22:51:34 CST 2018]; root of context hierarchy
+Mapped "{[/buyer/order/list],methods=[GET]}" onto public com.kzysure.demo.VO.ResultVO<java.util.List<com.kzysure.demo.dto.OrderDTO>> com.kzysure.demo.controller.BuyerOrderController.findList(com.kzysure.demo.form.ListForm)
+Mapped "{[/buyer/order/create],methods=[POST]}" onto public com.kzysure.demo.VO.ResultVO<java.util.Map<java.lang.String, java.lang.String>> com.kzysure.demo.controller.BuyerOrderController.createOrder(com.kzysure.demo.form.OrderForm,org.springframework.validation.BindingResult)
+Mapped "{[/buyer/order/detail],methods=[GET]}" onto public com.kzysure.demo.VO.ResultVO<com.kzysure.demo.dto.OrderDTO> com.kzysure.demo.controller.BuyerOrderController.finOne(java.lang.String,java.lang.String)
+Mapped "{[/buyer/order/cancel],methods=[POST]}" onto public com.kzysure.demo.VO.ResultVO com.kzysure.demo.controller.BuyerOrderController.cancelOrder(java.lang.String,java.lang.String)
+Mapped "{[/buyer/product/list],methods=[GET]}" onto public com.kzysure.demo.VO.ResultVO com.kzysure.demo.controller.BuyerProductController.list()
+Mapped "{[/fileUpload],methods=[POST],consumes=[multipart/form-data],produces=[application/json]}" onto public com.kzysure.demo.VO.ResultVO com.kzysure.demo.controller.FileUploadController.fileUpload(org.springframework.web.multipart.MultipartFile)
+Mapped "{[/oauth/githubOauth],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.kzysure.demo.controller.GithubOauthController.githubOauth(java.lang.String,java.lang.String,java.util.Map<java.lang.String, java.lang.String>)
+Mapped "{[/pay/create],methods=[GET]}" onto public void com.kzysure.demo.controller.PayController.create(java.lang.String,java.lang.String)
+Mapped "{[/seller/product/list],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.kzysure.demo.controller.ProductController.list(java.lang.Integer,java.lang.Integer,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/seller/denglu],methods=[GET]}" onto public com.kzysure.demo.VO.LoginResponse com.kzysure.demo.controller.SellerLoginController.denglu(java.lang.String,java.lang.String)
+Mapped "{[/seller/loginto],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.kzysure.demo.controller.SellerLoginController.login(java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/seller/order/list],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.kzysure.demo.controller.SellerOrderController.list(java.lang.Integer,java.lang.Integer,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/seller/order/detail],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.kzysure.demo.controller.SellerOrderController.detail(java.lang.String,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/seller/order/finish],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.kzysure.demo.controller.SellerOrderController.finish(java.lang.String,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/seller/order/cancel],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.kzysure.demo.controller.SellerOrderController.cancel(java.lang.String,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/seller/logout],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.kzysure.demo.controller.SellerUserController.logout(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.util.Map<java.lang.String, java.lang.String>)
+Mapped "{[/seller/login],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.kzysure.demo.controller.SellerUserController.login(java.lang.String,java.util.Map<java.lang.String, java.lang.String>,javax.servlet.http.HttpServletResponse)
+Mapped "{[/wechat/userInfo],methods=[GET]}" onto public java.lang.String com.kzysure.demo.controller.WechatController.getUserInfo(java.lang.String,java.lang.String)
+Mapped "{[/wechat/authorize],methods=[GET]}" onto public java.lang.String com.kzysure.demo.controller.WechatController.authorize(java.lang.String)
+Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Detected @ExceptionHandler methods in sellerAuthorizeHandler
+Detected @ExceptionHandler methods in sellerExceptionHandler
+Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+ClassTemplateLoader for Spring macros added to FreeMarker configuration
+Registering beans for JMX exposure on startup
+Initializing ProtocolHandler ["http-nio-8080"]
+Starting ProtocolHandler ["http-nio-8080"]
+Using a shared selector for servlet write/read
+Tomcat started on port(s): 8080 (http)
+Started SellApplication in 18.138 seconds (JVM running for 36.113)
+Initializing Spring FrameworkServlet 'dispatcherServlet'
+FrameworkServlet 'dispatcherServlet': initialization started
+FrameworkServlet 'dispatcherServlet': initialization completed in 39 ms
+HHH000397: Using ASTQueryTranslatorFactory

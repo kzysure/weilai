@@ -1,8 +1,8 @@
-package com.imooc.demo.repository;
+package com.kzysure.demo.repository;
 
 import static org.junit.Assert.*;
 
-import com.imooc.demo.dataobject.SellerInfo;
+import com.kzysure.demo.dataobject.SellerInfo;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;

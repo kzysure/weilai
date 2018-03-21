@@ -1,4 +1,4 @@
-package com.imooc.demo.service.impl;
+package com.kzysure.demo.service.impl;
 
 import static org.junit.Assert.*;
 

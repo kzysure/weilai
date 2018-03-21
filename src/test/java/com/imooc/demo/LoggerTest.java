@@ -1,4 +1,4 @@
-package com.imooc.demo;
+package com.kzysure.demo;
 
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;

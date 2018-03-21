@@ -1,8 +1,8 @@
-package com.imooc.demo.repository;
+package com.kzysure.demo.repository;
 
 import static org.junit.Assert.*;
 
-import com.imooc.demo.dataobject.OrderDetail;
+import com.kzysure.demo.dataobject.OrderDetail;
 import java.math.BigDecimal;
 import java.util.List;
 import org.junit.Assert;

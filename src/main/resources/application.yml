@@ -4,7 +4,9 @@ spring:
     username: root
     password: 123456
 #    url: jdbc:mysql://192.168.31.163/sell?characterEncoding=utf-8&useSSL=false
-    url: jdbc:mysql://192.168.0.176/sell?characterEncoding=utf-8&useSSL=false
+#    url: jdbc:mysql://192.168.1.104/weilai?characterEncoding=utf-8&useSSL=false
+
+    url: jdbc:mysql://localhost/weilai?characterEncoding=utf-8&useSSL=false
 
   jpa:
     show-sql: true
@@ -12,8 +14,8 @@ spring:
     default-property-inclusion: non_null
   redis:
 #    host: 192.168.31.163
-    host: 192.168.0.176
-    port: 6379
+   host: localhost
+   port: 6379
 server:
   context-path: /sell
 #logging:
@@ -34,3 +36,11 @@ github:
   clientSecret: f0ebd5865d54741c07fbcbec28d7e8f90229a8c4
   state: 1
   apiInfo: https://api.github.com/user?
+web:
+ upload-path: /resources/static/
+resources:
+ static-locations: classpath:/META-INF/resources/,classpath:/resources/,classpath:/static/,classpath:/public/,file:${web.upload-path}
+oss:
+ endpoint: oss-cn-beijing.aliyuncs.com
+ accessKeyId: LTAIiz6139bfeWM6
+ accessKeySecret: kqXTOVgKSkICeXkU7uzrE531yv8Azy

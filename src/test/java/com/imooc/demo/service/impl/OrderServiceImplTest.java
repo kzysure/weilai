@@ -1,14 +1,14 @@
-package com.imooc.demo.service.impl;
+package com.kzysure.demo.service.impl;
 
 import static org.junit.Assert.*;
 
-import com.imooc.demo.dataobject.OrderDetail;
-import com.imooc.demo.dataobject.OrderMaster;
-import com.imooc.demo.dto.OrderDTO;
-import com.imooc.demo.enums.OrderStatusEnum;
-import com.imooc.demo.enums.PayStatusEnum;
-import com.imooc.demo.repository.OrderDetailRepository;
-import com.imooc.demo.repository.OrderMasterRepository;
+import com.kzysure.demo.dataobject.OrderDetail;
+import com.kzysure.demo.dataobject.OrderMaster;
+import com.kzysure.demo.dto.OrderDTO;
+import com.kzysure.demo.enums.OrderStatusEnum;
+import com.kzysure.demo.enums.PayStatusEnum;
+import com.kzysure.demo.repository.OrderDetailRepository;
+import com.kzysure.demo.repository.OrderMasterRepository;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;

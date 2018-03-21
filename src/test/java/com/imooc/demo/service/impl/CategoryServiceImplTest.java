@@ -1,6 +1,6 @@
-package com.imooc.demo.service.impl;
+package com.kzysure.demo.service.impl;
 
-import com.imooc.demo.dataobject.ProductCategory;
+import com.kzysure.demo.dataobject.ProductCategory;
 import java.util.Arrays;
 import java.util.List;
 import org.junit.Assert;

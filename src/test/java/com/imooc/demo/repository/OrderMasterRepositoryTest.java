@@ -1,10 +1,10 @@
-package com.imooc.demo.repository;
+package com.kzysure.demo.repository;
 
 import static org.junit.Assert.*;
 
-import com.imooc.demo.dataobject.OrderMaster;
-import com.imooc.demo.enums.OrderStatusEnum;
-import com.imooc.demo.enums.PayStatusEnum;
+import com.kzysure.demo.dataobject.OrderMaster;
+import com.kzysure.demo.enums.OrderStatusEnum;
+import com.kzysure.demo.enums.PayStatusEnum;
 import java.math.BigDecimal;
 import org.junit.Assert;
 import org.junit.Test;

@@ -105,6 +105,19 @@
       <artifactId>spring-boot-starter-freemarker</artifactId>
     </dependency>
     <!--ping++聚合支付-->
+		<!-- https://mvnrepository.com/artifact/com.qiniu/qiniu-java-sdk -->
+		<dependency>
+			<groupId>com.qiniu</groupId>
+			<artifactId>qiniu-java-sdk</artifactId>
+			<version>7.2.11</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/com.aliyun.oss/aliyun-sdk-oss -->
+		<dependency>
+			<groupId>com.aliyun.oss</groupId>
+			<artifactId>aliyun-sdk-oss</artifactId>
+			<version>3.1.0</version>
+		</dependency>
+
 
 	</dependencies>
 	<build>

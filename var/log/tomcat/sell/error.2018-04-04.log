@@ -1,0 +1,89 @@
+2018-04-04 16:23:16,780-【创建订单】参数不正确，orderForm：OrderForm(name=null, phone=null, address=null, openid=null, items=null)
+2018-04-04 16:26:34,171-【创建订单】参数不正确，orderForm：OrderForm(name=null, phone=null, address=null, openid=null, items=null)
+2018-04-04 16:30:58,749-【创建订单】参数不正确，orderForm：OrderForm(name=null, phone=null, address=null, openid=null, items=null)
+2018-04-04 16:44:46,210-【创建订单】参数不正确，orderForm：OrderForm(name=null, phone=null, address=null, openid=null, items=null)
+2018-04-04 16:47:39,703-【创建订单】参数不正确，orderForm：OrderForm(name=null, phone=null, address=null, openid=null, items=null)
+2018-04-04 16:48:26,313-【对象转换异常】,string=dfdsf
+2018-04-04 16:52:06,415-【对象转换异常】,string=productId:1,productName:'kzysure'
+2018-04-04 16:53:39,915-【对象转换异常】,string=productId:1,productName:'kzysure'
+2018-04-04 17:00:59,693-【创建订单】参数不正确，orderForm：OrderForm(name=, phone=, address=, openid=abc, items=[{"productId":"6","productQuantity":2}])
+2018-04-04 19:20:23,601-【创建订单】参数不正确，orderForm：OrderForm(name=null, phone=null, address=null, openid=null, items=null)
+2018-04-04 19:40:10,530-【创建订单】参数不正确，orderForm：OrderForm(name=null, phone=null, address=null, openid=null, items=null)
+2018-04-04 19:40:23,635-【创建订单】参数不正确，orderForm：OrderForm(name=null, phone=null, address=null, openid=null, items=null)
+2018-04-04 19:40:45,529-【创建订单】参数不正确，orderForm：OrderForm(name=null, phone=null, address=null, openid=null, items=null)
+2018-04-04 19:46:48,072-【创建订单】参数不正确，orderForm：OrderForm(name=null, phone=null, address=null, openid=null, items=null)
+2018-04-04 19:48:34,815-【创建订单】参数不正确，orderForm：OrderForm(name=kxysure, phone=1378888, address=null, openid=kzysue, items=[object Object])
+2018-04-04 19:49:32,829-【对象转换异常】,string=[object Object]
+2018-04-04 19:49:37,346-【对象转换异常】,string=[object Object]
+2018-04-04 19:50:07,002-【对象转换异常】,string=[object Object],[object Object]
+2018-04-04 19:51:31,469-【对象转换异常】,string=[object Object]
+2018-04-04 19:55:11,946-【对象转换异常】,string=[object Object],[object Object]
+2018-04-04 19:55:17,386-【对象转换异常】,string=[object Object],[object Object]
+2018-04-04 19:58:02,012-【对象转换异常】,string=[object Object],[object Object]
+2018-04-04 19:59:26,646-【对象转换异常】,string=function toString() { [native code] }
+2018-04-04 20:19:39,787-【对象转换异常】,string=function toString() { [native code] }
+2018-04-04 20:19:55,142-【对象转换异常】,string=[object Object]
+2018-04-04 20:22:56,234-【对象转换异常】,string=[object Object]
+2018-04-04 21:28:34,441-【对象转换异常】,string={"productId":"4","productQuantity":"2"}]
+2018-04-04 21:29:43,485-【对象转换异常】,string={"productId":"4","productQuantity":"2"}]
+2018-04-04 21:29:46,050-【对象转换异常】,string={"productId":"4","productQuantity":"2"}]
+2018-04-04 23:44:45,087-Servlet.service() for servlet [dispatcherServlet] in context with path [/sell] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
+java.lang.NullPointerException: null
+	at com.kzysure.demo.controller.BuyerOrderController.findList(BuyerOrderController.java:75)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.__invoke(DelegatingMethodAccessorImpl.java:43)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:133)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:97)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:967)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:901)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:635)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:108)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:81)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.__invoke(StandardContextValve.java:96)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:478)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1459)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)

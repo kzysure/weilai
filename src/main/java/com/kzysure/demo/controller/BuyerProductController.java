@@ -54,6 +54,8 @@ List<ProductInfoVO> productInfoVOList = new ArrayList<>();
    if (productCategory1.getCategoryType().equals(productInfo.getCategoryType())){
      ProductInfoVO productInfoVO = new ProductInfoVO();
      BeanUtils.copyProperties(productInfo,productInfoVO);
+     productInfoVO.setCount("");
+     productInfoVO.setOldPrice(productInfoVO.getProductPrice());
      productInfoVOList.add(productInfoVO);
    }
 

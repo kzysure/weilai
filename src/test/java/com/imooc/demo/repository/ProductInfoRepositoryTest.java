@@ -4,6 +4,7 @@ import static org.junit.Assert.*;
 
 import com.kzysure.demo.dataobject.ProductInfo;
 import java.math.BigDecimal;
+import java.util.ArrayList;
 import java.util.List;
 import org.junit.Assert;
 import org.junit.Test;
@@ -67,5 +68,12 @@ ProductInfoRepository productInfoRepository;
     productInfoRepository.delete("yrld");
   }
 
-
+@Test
+  public void  findAllByProductds(){
+    List<String> itemsList = new ArrayList<>();
+    itemsList.add("1");
+    itemsList.add("3");
+    List<ProductInfo> productInfos = productInfoRepository.findAll(itemsList);
+  System.out.println(productInfos.size());
+}
 }

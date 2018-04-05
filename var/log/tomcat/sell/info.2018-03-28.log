@@ -1,0 +1,33 @@
+【登陆校验】，redis查不到token
+【登陆校验】，redis查不到token
+Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Mapped "{[/buyer/order/create],methods=[POST]}" onto public com.kzysure.demo.VO.ResultVO<java.util.Map<java.lang.String, java.lang.String>> com.kzysure.demo.controller.BuyerOrderController.createOrder(com.kzysure.demo.form.OrderForm,org.springframework.validation.BindingResult)
+Mapped "{[/buyer/order/list],methods=[GET]}" onto public com.kzysure.demo.VO.ResultVO<java.util.List<com.kzysure.demo.dto.OrderDTO>> com.kzysure.demo.controller.BuyerOrderController.findList(com.kzysure.demo.form.ListForm)
+Mapped "{[/buyer/order/detail],methods=[GET]}" onto public com.kzysure.demo.VO.ResultVO<com.kzysure.demo.dto.OrderDTO> com.kzysure.demo.controller.BuyerOrderController.finOne(java.lang.String,java.lang.String)
+Mapped "{[/buyer/order/cancel],methods=[POST]}" onto public com.kzysure.demo.VO.ResultVO com.kzysure.demo.controller.BuyerOrderController.cancelOrder(java.lang.String,java.lang.String)
+Mapped "{[/buyer/product/list],methods=[GET]}" onto public com.kzysure.demo.VO.ResultVO com.kzysure.demo.controller.BuyerProductController.list()
+Mapped "{[/fileUpload],methods=[POST],consumes=[multipart/form-data],produces=[application/json]}" onto public com.kzysure.demo.VO.ResultVO com.kzysure.demo.controller.FileUploadController.fileUpload(org.springframework.web.multipart.MultipartFile)
+Mapped "{[/oauth/githubOauth],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.kzysure.demo.controller.GithubOauthController.githubOauth(java.lang.String,java.lang.String,java.util.Map<java.lang.String, java.lang.String>)
+Mapped "{[/pay/create],methods=[GET]}" onto public void com.kzysure.demo.controller.PayController.create(java.lang.String,java.lang.String)
+Mapped "{[/seller/product/list],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.kzysure.demo.controller.ProductController.list(java.lang.Integer,java.lang.Integer,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/seller/denglu],methods=[GET]}" onto public com.kzysure.demo.VO.LoginResponse com.kzysure.demo.controller.SellerLoginController.denglu(java.lang.String,java.lang.String)
+Mapped "{[/seller/loginto],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.kzysure.demo.controller.SellerLoginController.login(java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/seller/login],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.kzysure.demo.controller.SellerUserController.login(java.lang.String,java.util.Map<java.lang.String, java.lang.String>,javax.servlet.http.HttpServletResponse)
+Mapped "{[/seller/logout],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.kzysure.demo.controller.SellerUserController.logout(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.util.Map<java.lang.String, java.lang.String>)
+Mapped "{[/wechat/userInfo],methods=[GET]}" onto public java.lang.String com.kzysure.demo.controller.WechatController.getUserInfo(java.lang.String,java.lang.String)
+Mapped "{[/wechat/authorize],methods=[GET]}" onto public java.lang.String com.kzysure.demo.controller.WechatController.authorize(java.lang.String)
+Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+Mapped "{[/seller/order/list],methods=[GET]}" onto public java.util.List<com.kzysure.demo.VO.OrderVO> com.kzysure.demo.controller.SellerOrderController.list()
+Mapped "{[/seller/order/finish],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.kzysure.demo.controller.SellerOrderController.finish(java.lang.String,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/seller/order/cancel],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.kzysure.demo.controller.SellerOrderController.cancel(java.lang.String,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/seller/order/detail],methods=[GET]}" onto public com.kzysure.demo.dto.OrderDTO com.kzysure.demo.controller.SellerOrderController.detail(java.lang.String,javax.servlet.http.HttpServletResponse)
+【登陆校验】，redis查不到token
+【登陆校验】，redis查不到token
+【登陆校验】，redis查不到token
+【登陆校验】，redis查不到token
+【登陆校验】，redis查不到token
+【登陆校验】，redis查不到token
+【登陆校验】，redis查不到token
+【登陆校验】，redis查不到token
+【登陆校验】，redis查不到token

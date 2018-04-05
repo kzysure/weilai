@@ -1,16 +1,26 @@
 package com.kzysure.demo.controller;
 
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+import com.kzysure.demo.VO.OrderConfirmVO;
 import com.kzysure.demo.VO.ResultVO;
 import com.kzysure.demo.converter.OrderForm2OrderDTOConverter;
+import com.kzysure.demo.dataobject.OrderDetail;
 import com.kzysure.demo.dataobject.OrderMaster;
+import com.kzysure.demo.dataobject.ProductInfo;
 import com.kzysure.demo.dto.OrderDTO;
+import com.kzysure.demo.enums.PayStatusEnum;
 import com.kzysure.demo.enums.ResultEnums;
 import com.kzysure.demo.exception.SellException;
 import com.kzysure.demo.form.ListForm;
 import com.kzysure.demo.form.OrderForm;
+import com.kzysure.demo.repository.OrderMasterRepository;
+import com.kzysure.demo.repository.ProductInfoRepository;
 import com.kzysure.demo.service.BuyerService;
 import com.kzysure.demo.service.OrderService;
 import com.kzysure.demo.utils.ResultVoUtil;
+import java.math.BigDecimal;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -18,6 +28,7 @@ import javax.validation.Valid;
 import lombok.Value;
 import lombok.extern.slf4j.Slf4j;
 import org.aspectj.weaver.ast.Or;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -42,9 +53,14 @@ public class BuyerOrderController {
   OrderService orderService;
   @Autowired
   BuyerService buyerService;
+  @Autowired
+  ProductInfoRepository productInfoRepository;
+  @Autowired
+  OrderMasterRepository orderMasterRepository;
   //创建商品
   @PostMapping("/create")
   public ResultVO<Map<String,String>> createOrder(@Valid OrderForm orderForm,BindingResult bindingResult){
+    System.out.println(orderForm.toString());
     if (bindingResult.hasErrors()){
       log.error("【创建订单】参数不正确，orderForm：{}",orderForm);
       throw new SellException(ResultEnums.PARAM_ERROR.getCode(),bindingResult.getFieldError().getDefaultMessage());
@@ -83,5 +99,57 @@ return ResultVoUtil.success(orderDTOPage.getContent());
   public ResultVO cancelOrder(@RequestParam("openid") String openid,@RequestParam("orderId") String orderId){
     OrderDTO orderDTO = buyerService.cancelOrder(openid,orderId);
     return ResultVoUtil.success();
+  }
+  @PostMapping("/orderConfirm")
+  public List<OrderConfirmVO> orderConfirm(@RequestParam("items") String items){
+    Gson gson = new Gson();
+    List<OrderDetail> orderDetailList = new ArrayList<>();
+    try{
+      orderDetailList = gson.fromJson(items,new TypeToken<List<OrderDetail>>(){}.getType());
+
+    }catch(Exception e){
+      log.error("【对象转换异常】,string={}",items);
+      throw new SellException(ResultEnums.PARAM_ERROR);
+    }
+    List<String> itemsList = new ArrayList<>();
+    List<OrderConfirmVO> orderConfirmVOS = new ArrayList<>();
+    for (OrderDetail orderDetail:orderDetailList){
+      itemsList.add(orderDetail.getProductId());
+    }
+    List<ProductInfo> productInfos = productInfoRepository.findAll(itemsList);
+    for (ProductInfo productInfo:productInfos){
+      for (OrderDetail orderDetail:orderDetailList){
+        if (productInfo.getProductId().equals(orderDetail.getProductId())){
+          //组装orderconfirm
+          OrderConfirmVO orderConfirmVO = new OrderConfirmVO();
+          BigDecimal bd6 = new BigDecimal(orderDetail.getProductQuantity());
+          orderConfirmVO.setOrderAmount(productInfo.getProductPrice().multiply(bd6));
+          orderConfirmVO.setProductName(productInfo.getProductName());
+          orderConfirmVO.setProductQuantity(orderDetail.getProductQuantity());
+          orderConfirmVO.setProductIcon(productInfo.getProductIcon());
+          orderConfirmVOS.add(orderConfirmVO);
+        }
+      }
+    }
+    return orderConfirmVOS;
+  }
+  @PostMapping("/orderPay")
+  public ResultVO orderPay(@RequestParam("orderId") String orderId){
+    OrderDTO orderDTO = orderService.findOne(orderId);
+    OrderMaster orderMaster1 = new OrderMaster();
+    BeanUtils.copyProperties(orderDTO, orderMaster1);
+    orderMaster1.setPayStatus(PayStatusEnum.SUCCESS.getCode());
+
+    OrderMaster orderMaster = orderMasterRepository.save(orderMaster1);
+    if (null != orderMaster){
+      ResultVO resultVO = new ResultVO();
+       resultVO.setMsg("支付成功");
+       resultVO.setCode(200);
+       return resultVO;
+    }else{
+      ResultVO resultVO = new ResultVO(200,"支付失败");
+
+      return resultVO;
+    }
   }
 }

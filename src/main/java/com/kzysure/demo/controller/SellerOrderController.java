@@ -1,14 +1,21 @@
 package com.kzysure.demo.controller;
 
+import com.kzysure.demo.VO.OrderVO;
+import com.kzysure.demo.dataobject.OrderMaster;
 import com.kzysure.demo.dto.OrderDTO;
 import com.kzysure.demo.enums.ResultEnums;
 import com.kzysure.demo.exception.SellException;
+import com.kzysure.demo.repository.OrderMasterRepository;
 import com.kzysure.demo.service.OrderService;
 import com.sun.org.apache.xpath.internal.operations.Mod;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
+import javax.servlet.http.HttpServletResponse;
 import lombok.extern.slf4j.Slf4j;
 import org.aspectj.weaver.ast.Or;
 import org.hibernate.criterion.Order;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -17,7 +24,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
+import sun.swing.BakedArrayList;
 
 /**
  * @author <a href="mailto:kzysure@kzysure.com">kzysure</a>
@@ -30,6 +39,8 @@ import org.springframework.web.servlet.ModelAndView;
 public class SellerOrderController {
   @Autowired
   OrderService orderService;
+  @Autowired
+  OrderMasterRepository orderMasterRepository;
   /**
    * 订单列表
    * @param page
@@ -37,16 +48,18 @@ public class SellerOrderController {
    * @return
    */
   @GetMapping("/list")
-  public ModelAndView list(@RequestParam(value = "page",defaultValue = "1") Integer page,
-                          @RequestParam(value = "size",defaultValue = "10") Integer size,
-                          Map<String,Object> map){
-    PageRequest pageRequest = new PageRequest(page-1,size);
-    Page<OrderDTO> orderDTOPage = orderService.findList(pageRequest);
-    map.put("orderDTOPage",orderDTOPage);
-    map.put("currentPage",page);
-    map.put("prePage",page-1);
-    map.put("nextPage",page+1);
-    return new ModelAndView("order/list",map);
+  @ResponseBody
+  public List<OrderVO> list(){
+  List<OrderMaster> orderMasterList = orderMasterRepository.findAll();
+    System.out.println(orderMasterList);
+  List<OrderVO> orderVoList = new ArrayList<>();
+  for (OrderMaster orderMaster:orderMasterList){
+    OrderVO orderVo = new OrderVO();
+    BeanUtils.copyProperties(orderMaster,orderVo);
+  orderVoList.add(orderVo);
+  }
+    System.out.println(orderVoList);
+  return  orderVoList;
   }
   @GetMapping("/cancel")
   public ModelAndView cancel(@RequestParam("orderId") String orderId,Map<String,Object> map){
@@ -67,19 +80,17 @@ public class SellerOrderController {
 
   }
   @GetMapping("/detail")
-  public ModelAndView detail(@RequestParam("orderId")  String orderId,Map<String,Object> map){
+  @ResponseBody
+  public OrderDTO detail(@RequestParam("orderId")  String orderId,HttpServletResponse response){
     OrderDTO orderDTO = new OrderDTO();
     try {
       orderDTO = orderService.findOne(orderId);
     }catch (SellException e){
       log.error("【卖家端订单详情】，查询不到订单{}",e);
-      map.put("msg", e.getMessage());
-      map.put("url","/sell/seller/order/list");
-      return new ModelAndView("common/error",map);
+      response.setStatus(500);
+      return orderDTO;
     }
-    map.put("orderDTO",orderDTO);
-    map.put("url","/sell/seller/order/list");
-    return  new ModelAndView("order/detail",map);
+    return  orderDTO;
   }
   @GetMapping("/finish")
   public ModelAndView finish(@RequestParam("orderId") String orderId,Map<String,Object> map){

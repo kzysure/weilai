@@ -35,14 +35,16 @@ public class SellerAuthorizeAspect {
   public void doVerify(){
     ServletRequestAttributes servletRequestAttributes = (ServletRequestAttributes) RequestContextHolder.getRequestAttributes();
     HttpServletRequest request = servletRequestAttributes.getRequest();
-    //查询cookie
-    Cookie cookie = CookieUtil.get(request,"token");
-    if (cookie == null){
-      log.warn("【登陆校验】，Cookie中查不到token");
-      throw new SellerAuthorizeException();
-    }
+    //从header查询token
+    String head = request.getHeader("token");
+//    //查询cookie
+//    Cookie cookie = CookieUtil.get(request,"token");
+//    if (cookie == null){
+//      log.warn("【登陆校验】，Cookie中查不到token");
+//      throw new SellerAuthorizeException();
+//    }
     //去redis里查token
-    String redisToken = stringRedisTemplate.opsForValue().get(String.format(RedisConfig.TOKEN_PREFIX,cookie.getValue()));
+    String redisToken = stringRedisTemplate.opsForValue().get(String.format(RedisConfig.TOKEN_PREFIX,head));
       if (StringUtils.isEmpty(redisToken)){
         log.warn("【登陆校验】，redis查不到token");
         throw new SellerAuthorizeException();

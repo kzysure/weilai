@@ -1,0 +1,228 @@
+Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@77a7cf58: startup date [Sat Apr 07 21:11:36 CST 2018]; root of context hierarchy
+Unregistering JMX-exposed beans on shutdown
+Closing JPA EntityManagerFactory for persistence unit 'default'
+HV000001: Hibernate Validator 5.3.5.Final
+Starting SellApplication on kzysuredeMacBook-Pro.local with PID 18871 (/Users/kzysure/workspace/Test/sell/target/classes started by kzysure in /Users/kzysure/workspace/Test/sell)
+No active profile set, falling back to default profiles: default
+Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@53f0a4cb: startup date [Sun Apr 08 12:32:47 CST 2018]; root of context hierarchy
+Multiple Spring Data modules found, entering strict repository configuration mode!
+Multiple Spring Data modules found, entering strict repository configuration mode!
+Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.kzysure.demo.repository.OrderMasterRepository.
+Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.kzysure.demo.repository.ProductInfoRepository.
+Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.kzysure.demo.repository.SellerInfoRepository.
+Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.kzysure.demo.repository.OrderDetailRepository.
+Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.kzysure.demo.repository.ProductCategoryRepository.
+JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+Tomcat initialized with port(s): 8080 (http)
+Starting service [Tomcat]
+Starting Servlet Engine: Apache Tomcat/8.5.23
+Initializing Spring embedded WebApplicationContext
+Root WebApplicationContext: initialization completed in 4304 ms
+Mapping servlet: 'dispatcherServlet' to [/]
+Mapping filter: 'characterEncodingFilter' to: [/*]
+Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+Mapping filter: 'httpPutFormContentFilter' to: [/*]
+Mapping filter: 'requestContextFilter' to: [/*]
+Building JPA container EntityManagerFactory for persistence unit 'default'
+HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+HHH000412: Hibernate Core {5.0.12.Final}
+HHH000206: hibernate.properties not found
+HHH000021: Bytecode provider name : javassist
+HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+Initialized JPA EntityManagerFactory for persistence unit 'default'
+Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@53f0a4cb: startup date [Sun Apr 08 12:32:47 CST 2018]; root of context hierarchy
+Mapped "{[/buyer/order/detail],methods=[GET]}" onto public com.kzysure.demo.VO.ResultVO<com.kzysure.demo.dto.OrderDTO> com.kzysure.demo.controller.BuyerOrderController.finOne(java.lang.String,java.lang.String)
+Mapped "{[/buyer/order/list],methods=[GET]}" onto public com.kzysure.demo.VO.ResultVO<java.util.List<com.kzysure.demo.dto.OrderDTO>> com.kzysure.demo.controller.BuyerOrderController.findList(com.kzysure.demo.form.ListForm)
+Mapped "{[/buyer/order/create],methods=[POST]}" onto public com.kzysure.demo.VO.ResultVO<java.util.Map<java.lang.String, java.lang.String>> com.kzysure.demo.controller.BuyerOrderController.createOrder(com.kzysure.demo.form.OrderForm,org.springframework.validation.BindingResult)
+Mapped "{[/buyer/order/cancel],methods=[POST]}" onto public com.kzysure.demo.VO.ResultVO com.kzysure.demo.controller.BuyerOrderController.cancelOrder(java.lang.String,java.lang.String)
+Mapped "{[/buyer/order/orderConfirm],methods=[POST]}" onto public java.util.List<com.kzysure.demo.VO.OrderConfirmVO> com.kzysure.demo.controller.BuyerOrderController.orderConfirm(java.lang.String)
+Mapped "{[/buyer/order/orderPay],methods=[POST]}" onto public com.kzysure.demo.VO.ResultVO com.kzysure.demo.controller.BuyerOrderController.orderPay(java.lang.String)
+Mapped "{[/buyer/order/orderList],methods=[GET]}" onto public java.util.List<com.kzysure.demo.VO.OrderVO> com.kzysure.demo.controller.BuyerOrderController.getOrderList(java.lang.String)
+Mapped "{[/buyer/order/finishOrder],methods=[POST]}" onto public com.kzysure.demo.VO.ResultVO com.kzysure.demo.controller.BuyerOrderController.finishOrder(java.lang.String)
+Mapped "{[/buyer/product/list],methods=[GET]}" onto public com.kzysure.demo.VO.ResultVO com.kzysure.demo.controller.BuyerProductController.list()
+Mapped "{[/fileUpload],methods=[POST],consumes=[multipart/form-data],produces=[application/json]}" onto public com.kzysure.demo.VO.ResultVO com.kzysure.demo.controller.FileUploadController.fileUpload(org.springframework.web.multipart.MultipartFile)
+Mapped "{[/oauth/githubOauth],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.kzysure.demo.controller.GithubOauthController.githubOauth(java.lang.String,java.lang.String,java.util.Map<java.lang.String, java.lang.String>)
+Mapped "{[/pay/create],methods=[GET]}" onto public void com.kzysure.demo.controller.PayController.create(java.lang.String,java.lang.String)
+Mapped "{[/seller/product/list],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.kzysure.demo.controller.ProductController.list(java.lang.Integer,java.lang.Integer,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/seller/loginto],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.kzysure.demo.controller.SellerLoginController.login(java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/seller/denglu],methods=[GET]}" onto public com.kzysure.demo.VO.LoginResponse com.kzysure.demo.controller.SellerLoginController.denglu(java.lang.String,java.lang.String)
+Mapped "{[/seller/order/list],methods=[GET]}" onto public java.util.List<com.kzysure.demo.VO.OrderVO> com.kzysure.demo.controller.SellerOrderController.list()
+Mapped "{[/seller/order/finish],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.kzysure.demo.controller.SellerOrderController.finish(java.lang.String,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/seller/order/cancel],methods=[GET]}" onto public com.kzysure.demo.VO.ResultVO com.kzysure.demo.controller.SellerOrderController.cancel(java.lang.String)
+Mapped "{[/seller/order/detail],methods=[GET]}" onto public com.kzysure.demo.dto.OrderDTO com.kzysure.demo.controller.SellerOrderController.detail(java.lang.String,javax.servlet.http.HttpServletResponse)
+Mapped "{[/seller/login],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.kzysure.demo.controller.SellerUserController.login(java.lang.String,java.util.Map<java.lang.String, java.lang.String>,javax.servlet.http.HttpServletResponse)
+Mapped "{[/seller/logout],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.kzysure.demo.controller.SellerUserController.logout(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.util.Map<java.lang.String, java.lang.String>)
+Mapped "{[/wechat/userInfo],methods=[GET]}" onto public java.lang.String com.kzysure.demo.controller.WechatController.getUserInfo(java.lang.String,java.lang.String)
+Mapped "{[/wechat/authorize],methods=[GET]}" onto public java.lang.String com.kzysure.demo.controller.WechatController.authorize(java.lang.String)
+Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Detected @ExceptionHandler methods in sellerAuthorizeHandler
+Detected @ExceptionHandler methods in sellerExceptionHandler
+Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+ClassTemplateLoader for Spring macros added to FreeMarker configuration
+Registering beans for JMX exposure on startup
+Initializing ProtocolHandler ["http-nio-8080"]
+Starting ProtocolHandler ["http-nio-8080"]
+Using a shared selector for servlet write/read
+Tomcat started on port(s): 8080 (http)
+Started SellApplication in 31.205 seconds (JVM running for 47.303)
+Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@53f0a4cb: startup date [Sun Apr 08 12:32:47 CST 2018]; root of context hierarchy
+Unregistering JMX-exposed beans on shutdown
+Closing JPA EntityManagerFactory for persistence unit 'default'
+HV000001: Hibernate Validator 5.3.5.Final
+Starting SellApplication on kzysuredeMacBook-Pro.local with PID 18991 (/Users/kzysure/workspace/Test/sell/target/classes started by kzysure in /Users/kzysure/workspace/Test/sell)
+No active profile set, falling back to default profiles: default
+Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4d722ac9: startup date [Sun Apr 08 12:41:04 CST 2018]; root of context hierarchy
+Multiple Spring Data modules found, entering strict repository configuration mode!
+Multiple Spring Data modules found, entering strict repository configuration mode!
+Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.kzysure.demo.repository.OrderMasterRepository.
+Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.kzysure.demo.repository.ProductInfoRepository.
+Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.kzysure.demo.repository.SellerInfoRepository.
+Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.kzysure.demo.repository.OrderDetailRepository.
+Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.kzysure.demo.repository.ProductCategoryRepository.
+JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+Tomcat initialized with port(s): 8080 (http)
+Starting service [Tomcat]
+Starting Servlet Engine: Apache Tomcat/8.5.23
+Initializing Spring embedded WebApplicationContext
+Root WebApplicationContext: initialization completed in 3300 ms
+Mapping servlet: 'dispatcherServlet' to [/]
+Mapping filter: 'characterEncodingFilter' to: [/*]
+Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+Mapping filter: 'httpPutFormContentFilter' to: [/*]
+Mapping filter: 'requestContextFilter' to: [/*]
+Building JPA container EntityManagerFactory for persistence unit 'default'
+HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+HHH000412: Hibernate Core {5.0.12.Final}
+HHH000206: hibernate.properties not found
+HHH000021: Bytecode provider name : javassist
+HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+Initialized JPA EntityManagerFactory for persistence unit 'default'
+Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4d722ac9: startup date [Sun Apr 08 12:41:04 CST 2018]; root of context hierarchy
+Mapped "{[/buyer/order/list],methods=[GET]}" onto public com.kzysure.demo.VO.ResultVO<java.util.List<com.kzysure.demo.dto.OrderDTO>> com.kzysure.demo.controller.BuyerOrderController.findList(com.kzysure.demo.form.ListForm)
+Mapped "{[/buyer/order/create],methods=[POST]}" onto public com.kzysure.demo.VO.ResultVO<java.util.Map<java.lang.String, java.lang.String>> com.kzysure.demo.controller.BuyerOrderController.createOrder(com.kzysure.demo.form.OrderForm,org.springframework.validation.BindingResult)
+Mapped "{[/buyer/order/detail],methods=[GET]}" onto public com.kzysure.demo.VO.ResultVO<com.kzysure.demo.dto.OrderDTO> com.kzysure.demo.controller.BuyerOrderController.finOne(java.lang.String,java.lang.String)
+Mapped "{[/buyer/order/cancel],methods=[POST]}" onto public com.kzysure.demo.VO.ResultVO com.kzysure.demo.controller.BuyerOrderController.cancelOrder(java.lang.String,java.lang.String)
+Mapped "{[/buyer/order/orderConfirm],methods=[POST]}" onto public java.util.List<com.kzysure.demo.VO.OrderConfirmVO> com.kzysure.demo.controller.BuyerOrderController.orderConfirm(java.lang.String)
+Mapped "{[/buyer/order/orderPay],methods=[POST]}" onto public com.kzysure.demo.VO.ResultVO com.kzysure.demo.controller.BuyerOrderController.orderPay(java.lang.String)
+Mapped "{[/buyer/order/orderList],methods=[GET]}" onto public java.util.List<com.kzysure.demo.VO.OrderVO> com.kzysure.demo.controller.BuyerOrderController.getOrderList(java.lang.String)
+Mapped "{[/buyer/order/finishOrder],methods=[POST]}" onto public com.kzysure.demo.VO.ResultVO com.kzysure.demo.controller.BuyerOrderController.finishOrder(java.lang.String)
+Mapped "{[/buyer/product/list],methods=[GET]}" onto public com.kzysure.demo.VO.ResultVO com.kzysure.demo.controller.BuyerProductController.list()
+Mapped "{[/fileUpload],methods=[POST],consumes=[multipart/form-data],produces=[application/json]}" onto public com.kzysure.demo.VO.ResultVO com.kzysure.demo.controller.FileUploadController.fileUpload(org.springframework.web.multipart.MultipartFile)
+Mapped "{[/oauth/githubOauth],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.kzysure.demo.controller.GithubOauthController.githubOauth(java.lang.String,java.lang.String,java.util.Map<java.lang.String, java.lang.String>)
+Mapped "{[/pay/create],methods=[GET]}" onto public void com.kzysure.demo.controller.PayController.create(java.lang.String,java.lang.String)
+Mapped "{[/seller/product/list],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.kzysure.demo.controller.ProductController.list(java.lang.Integer,java.lang.Integer,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/seller/loginto],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.kzysure.demo.controller.SellerLoginController.login(java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/seller/denglu],methods=[GET]}" onto public com.kzysure.demo.VO.LoginResponse com.kzysure.demo.controller.SellerLoginController.denglu(java.lang.String,java.lang.String)
+Mapped "{[/seller/order/list],methods=[GET]}" onto public java.util.List<com.kzysure.demo.VO.OrderVO> com.kzysure.demo.controller.SellerOrderController.list()
+Mapped "{[/seller/order/finish],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.kzysure.demo.controller.SellerOrderController.finish(java.lang.String,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/seller/order/detail],methods=[GET]}" onto public com.kzysure.demo.dto.OrderDTO com.kzysure.demo.controller.SellerOrderController.detail(java.lang.String,javax.servlet.http.HttpServletResponse)
+Mapped "{[/seller/order/cancel],methods=[GET]}" onto public com.kzysure.demo.VO.ResultVO com.kzysure.demo.controller.SellerOrderController.cancel(java.lang.String)
+Mapped "{[/seller/logout],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.kzysure.demo.controller.SellerUserController.logout(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.util.Map<java.lang.String, java.lang.String>)
+Mapped "{[/seller/login],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.kzysure.demo.controller.SellerUserController.login(java.lang.String,java.util.Map<java.lang.String, java.lang.String>,javax.servlet.http.HttpServletResponse)
+Mapped "{[/wechat/userInfo],methods=[GET]}" onto public java.lang.String com.kzysure.demo.controller.WechatController.getUserInfo(java.lang.String,java.lang.String)
+Mapped "{[/wechat/authorize],methods=[GET]}" onto public java.lang.String com.kzysure.demo.controller.WechatController.authorize(java.lang.String)
+Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Detected @ExceptionHandler methods in sellerAuthorizeHandler
+Detected @ExceptionHandler methods in sellerExceptionHandler
+Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+ClassTemplateLoader for Spring macros added to FreeMarker configuration
+Registering beans for JMX exposure on startup
+Initializing ProtocolHandler ["http-nio-8080"]
+Starting ProtocolHandler ["http-nio-8080"]
+Using a shared selector for servlet write/read
+Tomcat started on port(s): 8080 (http)
+Started SellApplication in 21.136 seconds (JVM running for 30.101)
+Initializing Spring FrameworkServlet 'dispatcherServlet'
+FrameworkServlet 'dispatcherServlet': initialization started
+FrameworkServlet 'dispatcherServlet': initialization completed in 65 ms
+【登陆校验】，redis查不到token
+HHH000397: Using ASTQueryTranslatorFactory
+Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4d722ac9: startup date [Sun Apr 08 12:41:04 CST 2018]; root of context hierarchy
+Unregistering JMX-exposed beans on shutdown
+Closing JPA EntityManagerFactory for persistence unit 'default'
+HV000001: Hibernate Validator 5.3.5.Final
+Starting SellApplication on kzysuredeMacBook-Pro.local with PID 19159 (/Users/kzysure/workspace/Test/sell/target/classes started by kzysure in /Users/kzysure/workspace/Test/sell)
+No active profile set, falling back to default profiles: default
+Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@53f0a4cb: startup date [Sun Apr 08 13:11:00 CST 2018]; root of context hierarchy
+Multiple Spring Data modules found, entering strict repository configuration mode!
+Multiple Spring Data modules found, entering strict repository configuration mode!
+Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.kzysure.demo.repository.OrderMasterRepository.
+Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.kzysure.demo.repository.ProductInfoRepository.
+Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.kzysure.demo.repository.SellerInfoRepository.
+Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.kzysure.demo.repository.OrderDetailRepository.
+Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.kzysure.demo.repository.ProductCategoryRepository.
+JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+Tomcat initialized with port(s): 8080 (http)
+Starting service [Tomcat]
+Starting Servlet Engine: Apache Tomcat/8.5.23
+Initializing Spring embedded WebApplicationContext
+Root WebApplicationContext: initialization completed in 2927 ms
+Mapping servlet: 'dispatcherServlet' to [/]
+Mapping filter: 'characterEncodingFilter' to: [/*]
+Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+Mapping filter: 'httpPutFormContentFilter' to: [/*]
+Mapping filter: 'requestContextFilter' to: [/*]
+Building JPA container EntityManagerFactory for persistence unit 'default'
+HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+HHH000412: Hibernate Core {5.0.12.Final}
+HHH000206: hibernate.properties not found
+HHH000021: Bytecode provider name : javassist
+HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+Initialized JPA EntityManagerFactory for persistence unit 'default'
+Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@53f0a4cb: startup date [Sun Apr 08 13:11:00 CST 2018]; root of context hierarchy
+Mapped "{[/buyer/order/list],methods=[GET]}" onto public com.kzysure.demo.VO.ResultVO<java.util.List<com.kzysure.demo.dto.OrderDTO>> com.kzysure.demo.controller.BuyerOrderController.findList(com.kzysure.demo.form.ListForm)
+Mapped "{[/buyer/order/create],methods=[POST]}" onto public com.kzysure.demo.VO.ResultVO<java.util.Map<java.lang.String, java.lang.String>> com.kzysure.demo.controller.BuyerOrderController.createOrder(com.kzysure.demo.form.OrderForm,org.springframework.validation.BindingResult)
+Mapped "{[/buyer/order/detail],methods=[GET]}" onto public com.kzysure.demo.VO.ResultVO<com.kzysure.demo.dto.OrderDTO> com.kzysure.demo.controller.BuyerOrderController.finOne(java.lang.String,java.lang.String)
+Mapped "{[/buyer/order/cancel],methods=[POST]}" onto public com.kzysure.demo.VO.ResultVO com.kzysure.demo.controller.BuyerOrderController.cancelOrder(java.lang.String,java.lang.String)
+Mapped "{[/buyer/order/orderConfirm],methods=[POST]}" onto public java.util.List<com.kzysure.demo.VO.OrderConfirmVO> com.kzysure.demo.controller.BuyerOrderController.orderConfirm(java.lang.String)
+Mapped "{[/buyer/order/orderPay],methods=[POST]}" onto public com.kzysure.demo.VO.ResultVO com.kzysure.demo.controller.BuyerOrderController.orderPay(java.lang.String)
+Mapped "{[/buyer/order/orderList],methods=[GET]}" onto public java.util.List<com.kzysure.demo.VO.OrderVO> com.kzysure.demo.controller.BuyerOrderController.getOrderList(java.lang.String)
+Mapped "{[/buyer/order/finishOrder],methods=[POST]}" onto public com.kzysure.demo.VO.ResultVO com.kzysure.demo.controller.BuyerOrderController.finishOrder(java.lang.String)
+Mapped "{[/buyer/product/list],methods=[GET]}" onto public com.kzysure.demo.VO.ResultVO com.kzysure.demo.controller.BuyerProductController.list()
+Mapped "{[/fileUpload],methods=[POST],consumes=[multipart/form-data],produces=[application/json]}" onto public com.kzysure.demo.VO.ResultVO com.kzysure.demo.controller.FileUploadController.fileUpload(org.springframework.web.multipart.MultipartFile)
+Mapped "{[/oauth/githubOauth],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.kzysure.demo.controller.GithubOauthController.githubOauth(java.lang.String,java.lang.String,java.util.Map<java.lang.String, java.lang.String>)
+Mapped "{[/pay/create],methods=[GET]}" onto public void com.kzysure.demo.controller.PayController.create(java.lang.String,java.lang.String)
+Mapped "{[/seller/product/list],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.kzysure.demo.controller.ProductController.list(java.lang.Integer,java.lang.Integer,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/seller/loginto],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.kzysure.demo.controller.SellerLoginController.login(java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/seller/denglu],methods=[GET]}" onto public com.kzysure.demo.VO.LoginResponse com.kzysure.demo.controller.SellerLoginController.denglu(java.lang.String,java.lang.String)
+Mapped "{[/seller/order/list],methods=[GET]}" onto public java.util.List<com.kzysure.demo.VO.OrderVO> com.kzysure.demo.controller.SellerOrderController.list()
+Mapped "{[/seller/order/finish],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.kzysure.demo.controller.SellerOrderController.finish(java.lang.String,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/seller/order/detail],methods=[GET]}" onto public com.kzysure.demo.dto.OrderDTO com.kzysure.demo.controller.SellerOrderController.detail(java.lang.String,javax.servlet.http.HttpServletResponse)
+Mapped "{[/seller/order/cancel],methods=[GET]}" onto public com.kzysure.demo.VO.ResultVO com.kzysure.demo.controller.SellerOrderController.cancel(java.lang.String)
+Mapped "{[/seller/login],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.kzysure.demo.controller.SellerUserController.login(java.lang.String,java.util.Map<java.lang.String, java.lang.String>,javax.servlet.http.HttpServletResponse)
+Mapped "{[/seller/logout],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.kzysure.demo.controller.SellerUserController.logout(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.util.Map<java.lang.String, java.lang.String>)
+Mapped "{[/wechat/userInfo],methods=[GET]}" onto public java.lang.String com.kzysure.demo.controller.WechatController.getUserInfo(java.lang.String,java.lang.String)
+Mapped "{[/wechat/authorize],methods=[GET]}" onto public java.lang.String com.kzysure.demo.controller.WechatController.authorize(java.lang.String)
+Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Detected @ExceptionHandler methods in sellerAuthorizeHandler
+Detected @ExceptionHandler methods in sellerExceptionHandler
+Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+ClassTemplateLoader for Spring macros added to FreeMarker configuration
+Registering beans for JMX exposure on startup
+Initializing ProtocolHandler ["http-nio-8080"]
+Starting ProtocolHandler ["http-nio-8080"]
+Using a shared selector for servlet write/read
+Tomcat started on port(s): 8080 (http)
+Started SellApplication in 37.36 seconds (JVM running for 53.02)
+Initializing Spring FrameworkServlet 'dispatcherServlet'
+FrameworkServlet 'dispatcherServlet': initialization started
+FrameworkServlet 'dispatcherServlet': initialization completed in 39 ms
+HHH000397: Using ASTQueryTranslatorFactory

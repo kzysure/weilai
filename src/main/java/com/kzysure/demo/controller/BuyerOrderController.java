@@ -3,17 +3,20 @@ package com.kzysure.demo.controller;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.kzysure.demo.VO.OrderConfirmVO;
+import com.kzysure.demo.VO.OrderVO;
 import com.kzysure.demo.VO.ResultVO;
 import com.kzysure.demo.converter.OrderForm2OrderDTOConverter;
 import com.kzysure.demo.dataobject.OrderDetail;
 import com.kzysure.demo.dataobject.OrderMaster;
 import com.kzysure.demo.dataobject.ProductInfo;
 import com.kzysure.demo.dto.OrderDTO;
+import com.kzysure.demo.enums.OrderStatusEnum;
 import com.kzysure.demo.enums.PayStatusEnum;
 import com.kzysure.demo.enums.ResultEnums;
 import com.kzysure.demo.exception.SellException;
 import com.kzysure.demo.form.ListForm;
 import com.kzysure.demo.form.OrderForm;
+import com.kzysure.demo.repository.OrderDetailRepository;
 import com.kzysure.demo.repository.OrderMasterRepository;
 import com.kzysure.demo.repository.ProductInfoRepository;
 import com.kzysure.demo.service.BuyerService;
@@ -57,6 +60,8 @@ public class BuyerOrderController {
   ProductInfoRepository productInfoRepository;
   @Autowired
   OrderMasterRepository orderMasterRepository;
+  @Autowired
+  OrderDetailRepository orderDetailRepository;
   //创建商品
   @PostMapping("/create")
   public ResultVO<Map<String,String>> createOrder(@Valid OrderForm orderForm,BindingResult bindingResult){
@@ -135,13 +140,11 @@ return ResultVoUtil.success(orderDTOPage.getContent());
   }
   @PostMapping("/orderPay")
   public ResultVO orderPay(@RequestParam("orderId") String orderId){
-    OrderDTO orderDTO = orderService.findOne(orderId);
-    OrderMaster orderMaster1 = new OrderMaster();
-    BeanUtils.copyProperties(orderDTO, orderMaster1);
-    orderMaster1.setPayStatus(PayStatusEnum.SUCCESS.getCode());
+   OrderMaster orderMaster = orderMasterRepository.findOne(orderId);
+    orderMaster.setPayStatus(PayStatusEnum.SUCCESS.getCode());
 
-    OrderMaster orderMaster = orderMasterRepository.save(orderMaster1);
-    if (null != orderMaster){
+    OrderMaster orderMaster1 = orderMasterRepository.save(orderMaster);
+    if (null != orderMaster1){
       ResultVO resultVO = new ResultVO();
        resultVO.setMsg("支付成功");
        resultVO.setCode(200);
@@ -151,5 +154,26 @@ return ResultVoUtil.success(orderDTOPage.getContent());
 
       return resultVO;
     }
+  }
+  @GetMapping("/orderList")
+  public List<OrderVO> getOrderList(@RequestParam("openid") String openid){
+    List<OrderMaster> orderMasters = orderMasterRepository.findOrderMastersByBuyerOpenidOrderByCreateTimeDesc(openid);
+    List<OrderVO> orderVOList = new ArrayList<>();
+    for (OrderMaster orderMaster:orderMasters){
+      OrderVO orderVO = new OrderVO();
+      BeanUtils.copyProperties(orderMaster,orderVO);
+      List<OrderDetail> orderDetailList = orderDetailRepository.findByOrderId(orderMaster.getOrderId());
+      orderVO.setOrderDetailList(orderDetailList);
+      orderVOList.add(orderVO);
+
+    }
+    return orderVOList;
+  }
+  @PostMapping("/finishOrder")
+  public ResultVO finishOrder(@RequestParam("orderId") String orderId){
+    OrderMaster orderMaster = orderMasterRepository.findOne(orderId);
+    orderMaster.setOrderStatus(OrderStatusEnum.FINISHED.getCode());
+    orderMasterRepository.save(orderMaster);
+    return new ResultVO(200,"确认收货成功");
   }
 }

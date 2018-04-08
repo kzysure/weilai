@@ -1,6 +1,7 @@
 package com.kzysure.demo.controller;
 
 import com.kzysure.demo.VO.OrderVO;
+import com.kzysure.demo.VO.ResultVO;
 import com.kzysure.demo.dataobject.OrderMaster;
 import com.kzysure.demo.dto.OrderDTO;
 import com.kzysure.demo.enums.ResultEnums;
@@ -43,14 +44,12 @@ public class SellerOrderController {
   OrderMasterRepository orderMasterRepository;
   /**
    * 订单列表
-   * @param page
-   * @param size
    * @return
    */
   @GetMapping("/list")
   @ResponseBody
   public List<OrderVO> list(){
-  List<OrderMaster> orderMasterList = orderMasterRepository.findAll();
+  List<OrderMaster> orderMasterList = orderMasterRepository.findAllByOrderByCreateTimeDesc();
     System.out.println(orderMasterList);
   List<OrderVO> orderVoList = new ArrayList<>();
   for (OrderMaster orderMaster:orderMasterList){
@@ -62,20 +61,18 @@ public class SellerOrderController {
   return  orderVoList;
   }
   @GetMapping("/cancel")
-  public ModelAndView cancel(@RequestParam("orderId") String orderId,Map<String,Object> map){
+  @ResponseBody
+  public ResultVO cancel(@RequestParam("orderId") String orderId){
     try{
       OrderDTO orderDTO = orderService.findOne(orderId);
       OrderDTO orderDTO1 = orderService.cancel(orderDTO);
 
     }catch(SellException e){
       log.error("【卖家端取消订单】，查询不到订单{}",e);
-      map.put("msg", e.getMessage());
-      map.put("url","/sell/seller/order/list");
-      return new ModelAndView("common/error",map);
+
+      return new ResultVO(400,"未查找到订单");
     }
-    map.put("msg", ResultEnums.ORDER_CANCEL_SUCCESS.getMsg());
-    map.put("url","/sell/seller/order/list");
-    return new ModelAndView("common/success",map);
+  return new ResultVO(200,"订单已取消");
 
 
   }

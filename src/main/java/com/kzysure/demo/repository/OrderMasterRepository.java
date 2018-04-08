@@ -1,6 +1,7 @@
 package com.kzysure.demo.repository;
 
 import com.kzysure.demo.dataobject.OrderMaster;
+import java.util.List;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -12,5 +13,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
  */
 public interface OrderMasterRepository extends JpaRepository<OrderMaster,String>{
   Page<OrderMaster> findByBuyerOpenid(String buyerOpenid,Pageable pageable);
-
+  List<OrderMaster> findOrderMastersByBuyerOpenidOrderByCreateTimeDesc(String openid);
+  List<OrderMaster> findAllByOrderByCreateTimeDesc();
 }

@@ -6,6 +6,7 @@ import com.kzysure.demo.dataobject.OrderMaster;
 import com.kzysure.demo.enums.OrderStatusEnum;
 import com.kzysure.demo.enums.PayStatusEnum;
 import java.math.BigDecimal;
+import java.util.List;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -43,7 +44,10 @@ public void saveTest(){
     PageRequest request = new PageRequest(1,3);
   OrderMaster orderMaster = new OrderMaster();
   Page<OrderMaster> result = orderMasterRepository.findByBuyerOpenid("yrl",request);
+    List<OrderMaster> orderMasters = orderMasterRepository.findOrderMastersByBuyerOpenidOrderByCreateTimeDesc("Struggle-");
+    System.out.println(orderMasters.size());
     System.out.println(result.getTotalElements());
+//    List<OrderMaster> orderMasterList = orderMasterRepository.findAllOrderByCreateTime();
     Assert.assertNotEquals(0,result.getTotalElements());
   }
 

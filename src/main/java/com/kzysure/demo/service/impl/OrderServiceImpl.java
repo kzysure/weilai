@@ -1,11 +1,13 @@
 package com.kzysure.demo.service.impl;
 
+import com.kzysure.demo.VO.WebsocketVO;
 import com.kzysure.demo.converter.OrderMaster2OrderDTOConveter;
 import com.kzysure.demo.dataobject.OrderDetail;
 import com.kzysure.demo.dataobject.OrderMaster;
 import com.kzysure.demo.dataobject.ProductInfo;
 import com.kzysure.demo.dto.CartDTO;
 import com.kzysure.demo.dto.OrderDTO;
+import com.kzysure.demo.enums.NotificationTypeEnum;
 import com.kzysure.demo.enums.OrderStatusEnum;
 import com.kzysure.demo.enums.PayStatusEnum;
 import com.kzysure.demo.enums.ResultEnums;
@@ -89,8 +91,13 @@ public class OrderServiceImpl implements OrderService {
         Collectors.toList());
 
     productInfoService.decreaseStock(cartDTOList);
+    //构造websocket消息
+  WebsocketVO websocketVO = new WebsocketVO();
+  websocketVO.setKey(NotificationTypeEnum.SUCCESS.getKey());
+  websocketVO.setMsg("您有新的未来外卖订单，请注意接单！");
+  websocketVO.setMsgType(NotificationTypeEnum.SUCCESS.getValue());
     //发送webSocket消息
-      webSocket.sendMessage("您有新的胃来外卖订单");
+      webSocket.sendMessage(websocketVO);
 
     return orderDTO;
 

@@ -1,0 +1,291 @@
+Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@77a7cf58: startup date [Mon Apr 09 13:29:27 CST 2018]; root of context hierarchy
+Unregistering JMX-exposed beans on shutdown
+Closing JPA EntityManagerFactory for persistence unit 'default'
+HV000001: Hibernate Validator 5.3.5.Final
+Starting SellApplication on kzysuredeMacBook-Pro.local with PID 27578 (/Users/kzysure/workspace/Test/sell/target/classes started by kzysure in /Users/kzysure/workspace/Test/sell)
+No active profile set, falling back to default profiles: default
+Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3d97a632: startup date [Tue Apr 10 09:01:21 CST 2018]; root of context hierarchy
+Multiple Spring Data modules found, entering strict repository configuration mode!
+Multiple Spring Data modules found, entering strict repository configuration mode!
+Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.kzysure.demo.repository.OrderMasterRepository.
+Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.kzysure.demo.repository.ProductInfoRepository.
+Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.kzysure.demo.repository.SellerInfoRepository.
+Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.kzysure.demo.repository.OrderDetailRepository.
+Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.kzysure.demo.repository.ProductCategoryRepository.
+JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+Tomcat initialized with port(s): 8080 (http)
+Starting service [Tomcat]
+Starting Servlet Engine: Apache Tomcat/8.5.23
+Initializing Spring embedded WebApplicationContext
+Root WebApplicationContext: initialization completed in 3451 ms
+Mapping servlet: 'dispatcherServlet' to [/]
+Mapping filter: 'characterEncodingFilter' to: [/*]
+Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+Mapping filter: 'httpPutFormContentFilter' to: [/*]
+Mapping filter: 'requestContextFilter' to: [/*]
+Building JPA container EntityManagerFactory for persistence unit 'default'
+HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+HHH000412: Hibernate Core {5.0.12.Final}
+HHH000206: hibernate.properties not found
+HHH000021: Bytecode provider name : javassist
+HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+Initialized JPA EntityManagerFactory for persistence unit 'default'
+Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3d97a632: startup date [Tue Apr 10 09:01:21 CST 2018]; root of context hierarchy
+Mapped "{[/buyer/order/list],methods=[GET]}" onto public com.kzysure.demo.VO.ResultVO<java.util.List<com.kzysure.demo.dto.OrderDTO>> com.kzysure.demo.controller.BuyerOrderController.findList(com.kzysure.demo.form.ListForm)
+Mapped "{[/buyer/order/create],methods=[POST]}" onto public com.kzysure.demo.VO.ResultVO<java.util.Map<java.lang.String, java.lang.String>> com.kzysure.demo.controller.BuyerOrderController.createOrder(com.kzysure.demo.form.OrderForm,org.springframework.validation.BindingResult)
+Mapped "{[/buyer/order/detail],methods=[GET]}" onto public com.kzysure.demo.VO.ResultVO<com.kzysure.demo.dto.OrderDTO> com.kzysure.demo.controller.BuyerOrderController.finOne(java.lang.String,java.lang.String)
+Mapped "{[/buyer/order/cancel],methods=[POST]}" onto public com.kzysure.demo.VO.ResultVO com.kzysure.demo.controller.BuyerOrderController.cancelOrder(java.lang.String,java.lang.String)
+Mapped "{[/buyer/order/orderConfirm],methods=[POST]}" onto public java.util.List<com.kzysure.demo.VO.OrderConfirmVO> com.kzysure.demo.controller.BuyerOrderController.orderConfirm(java.lang.String)
+Mapped "{[/buyer/order/orderPay],methods=[POST]}" onto public com.kzysure.demo.VO.ResultVO com.kzysure.demo.controller.BuyerOrderController.orderPay(java.lang.String)
+Mapped "{[/buyer/order/orderList],methods=[GET]}" onto public java.util.List<com.kzysure.demo.VO.OrderVO> com.kzysure.demo.controller.BuyerOrderController.getOrderList(java.lang.String)
+Mapped "{[/buyer/order/finishOrder],methods=[POST]}" onto public com.kzysure.demo.VO.ResultVO com.kzysure.demo.controller.BuyerOrderController.finishOrder(java.lang.String)
+Mapped "{[/buyer/product/list],methods=[GET]}" onto public com.kzysure.demo.VO.ResultVO com.kzysure.demo.controller.BuyerProductController.list()
+Mapped "{[/fileUpload],methods=[POST],consumes=[multipart/form-data],produces=[application/json]}" onto public com.kzysure.demo.VO.ResultVO com.kzysure.demo.controller.FileUploadController.fileUpload(org.springframework.web.multipart.MultipartFile)
+Mapped "{[/oauth/githubOauth],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.kzysure.demo.controller.GithubOauthController.githubOauth(java.lang.String,java.lang.String,java.util.Map<java.lang.String, java.lang.String>)
+Mapped "{[/pay/create],methods=[GET]}" onto public void com.kzysure.demo.controller.PayController.create(java.lang.String,java.lang.String)
+Mapped "{[/seller/product/list],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.kzysure.demo.controller.ProductController.list(java.lang.Integer,java.lang.Integer,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/seller/loginto],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.kzysure.demo.controller.SellerLoginController.login(java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/seller/denglu],methods=[GET]}" onto public com.kzysure.demo.VO.LoginResponse com.kzysure.demo.controller.SellerLoginController.denglu(java.lang.String,java.lang.String)
+Mapped "{[/seller/order/list],methods=[GET]}" onto public java.util.List<com.kzysure.demo.VO.OrderVO> com.kzysure.demo.controller.SellerOrderController.list()
+Mapped "{[/seller/order/finish],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.kzysure.demo.controller.SellerOrderController.finish(java.lang.String,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/seller/order/cancel],methods=[GET]}" onto public com.kzysure.demo.VO.ResultVO com.kzysure.demo.controller.SellerOrderController.cancel(java.lang.String)
+Mapped "{[/seller/order/detail],methods=[GET]}" onto public com.kzysure.demo.dto.OrderDTO com.kzysure.demo.controller.SellerOrderController.detail(java.lang.String,javax.servlet.http.HttpServletResponse)
+Mapped "{[/seller/login],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.kzysure.demo.controller.SellerUserController.login(java.lang.String,java.util.Map<java.lang.String, java.lang.String>,javax.servlet.http.HttpServletResponse)
+Mapped "{[/seller/logout],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.kzysure.demo.controller.SellerUserController.logout(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.util.Map<java.lang.String, java.lang.String>)
+Mapped "{[/wechat/userInfo],methods=[GET]}" onto public java.lang.String com.kzysure.demo.controller.WechatController.getUserInfo(java.lang.String,java.lang.String)
+Mapped "{[/wechat/authorize],methods=[GET]}" onto public java.lang.String com.kzysure.demo.controller.WechatController.authorize(java.lang.String)
+Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Detected @ExceptionHandler methods in sellerAuthorizeHandler
+Detected @ExceptionHandler methods in sellerExceptionHandler
+Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+ClassTemplateLoader for Spring macros added to FreeMarker configuration
+Registering @ServerEndpoint class: class com.kzysure.demo.service.WebSocket
+Registering beans for JMX exposure on startup
+Initializing ProtocolHandler ["http-nio-8080"]
+Starting ProtocolHandler ["http-nio-8080"]
+Using a shared selector for servlet write/read
+Tomcat started on port(s): 8080 (http)
+Started SellApplication in 34.281 seconds (JVM running for 50.952)
+Initializing Spring FrameworkServlet 'dispatcherServlet'
+FrameworkServlet 'dispatcherServlet': initialization started
+FrameworkServlet 'dispatcherServlet': initialization completed in 202 ms
+【websocket消息】有新的连接，总数：1
+【登陆校验】，redis查不到token
+HHH000397: Using ASTQueryTranslatorFactory
+【websocket消息】关闭连接
+【websocket消息】有新的连接，总数：1
+【websocket消息】关闭连接
+【websocket消息】有新的连接，总数：1
+【Websocket】，广播消息：WebsocketVO(key=1, msgType=success, msg=您有新的未来外卖订单，请注意接单！)
+【websocket消息】关闭连接
+Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3d97a632: startup date [Tue Apr 10 09:01:21 CST 2018]; root of context hierarchy
+Unregistering JMX-exposed beans on shutdown
+Closing JPA EntityManagerFactory for persistence unit 'default'
+HV000001: Hibernate Validator 5.3.5.Final
+Starting SellApplication on kzysuredeMacBook-Pro.local with PID 28837 (/Users/kzysure/workspace/Test/sell/target/classes started by kzysure in /Users/kzysure/workspace/Test/sell)
+No active profile set, falling back to default profiles: default
+Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7e5d9a50: startup date [Tue Apr 10 12:44:33 CST 2018]; root of context hierarchy
+Multiple Spring Data modules found, entering strict repository configuration mode!
+Multiple Spring Data modules found, entering strict repository configuration mode!
+Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.kzysure.demo.repository.OrderMasterRepository.
+Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.kzysure.demo.repository.ProductInfoRepository.
+Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.kzysure.demo.repository.SellerInfoRepository.
+Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.kzysure.demo.repository.OrderDetailRepository.
+Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.kzysure.demo.repository.ProductCategoryRepository.
+JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+Tomcat initialized with port(s): 8080 (http)
+Starting service [Tomcat]
+Starting Servlet Engine: Apache Tomcat/8.5.23
+Initializing Spring embedded WebApplicationContext
+Root WebApplicationContext: initialization completed in 3619 ms
+Mapping servlet: 'dispatcherServlet' to [/]
+Mapping filter: 'characterEncodingFilter' to: [/*]
+Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+Mapping filter: 'httpPutFormContentFilter' to: [/*]
+Mapping filter: 'requestContextFilter' to: [/*]
+Building JPA container EntityManagerFactory for persistence unit 'default'
+HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+HHH000412: Hibernate Core {5.0.12.Final}
+HHH000206: hibernate.properties not found
+HHH000021: Bytecode provider name : javassist
+HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+Initialized JPA EntityManagerFactory for persistence unit 'default'
+Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7e5d9a50: startup date [Tue Apr 10 12:44:33 CST 2018]; root of context hierarchy
+Mapped "{[/buyer/order/orderPay],methods=[POST]}" onto public com.kzysure.demo.VO.ResultVO com.kzysure.demo.controller.BuyerOrderController.orderPay(java.lang.String)
+Mapped "{[/buyer/order/detail],methods=[GET]}" onto public com.kzysure.demo.VO.ResultVO<com.kzysure.demo.dto.OrderDTO> com.kzysure.demo.controller.BuyerOrderController.finOne(java.lang.String,java.lang.String)
+Mapped "{[/buyer/order/list],methods=[GET]}" onto public com.kzysure.demo.VO.ResultVO<java.util.List<com.kzysure.demo.dto.OrderDTO>> com.kzysure.demo.controller.BuyerOrderController.findList(com.kzysure.demo.form.ListForm)
+Mapped "{[/buyer/order/create],methods=[POST]}" onto public com.kzysure.demo.VO.ResultVO<java.util.Map<java.lang.String, java.lang.String>> com.kzysure.demo.controller.BuyerOrderController.createOrder(com.kzysure.demo.form.OrderForm,org.springframework.validation.BindingResult)
+Mapped "{[/buyer/order/cancel],methods=[POST]}" onto public com.kzysure.demo.VO.ResultVO com.kzysure.demo.controller.BuyerOrderController.cancelOrder(java.lang.String,java.lang.String)
+Mapped "{[/buyer/order/orderConfirm],methods=[POST]}" onto public java.util.List<com.kzysure.demo.VO.OrderConfirmVO> com.kzysure.demo.controller.BuyerOrderController.orderConfirm(java.lang.String)
+Mapped "{[/buyer/order/orderList],methods=[GET]}" onto public java.util.List<com.kzysure.demo.VO.OrderVO> com.kzysure.demo.controller.BuyerOrderController.getOrderList(java.lang.String)
+Mapped "{[/buyer/order/finishOrder],methods=[POST]}" onto public com.kzysure.demo.VO.ResultVO com.kzysure.demo.controller.BuyerOrderController.finishOrder(java.lang.String)
+Mapped "{[/buyer/product/list],methods=[GET]}" onto public com.kzysure.demo.VO.ResultVO com.kzysure.demo.controller.BuyerProductController.list()
+Mapped "{[/fileUpload],methods=[POST],consumes=[multipart/form-data],produces=[application/json]}" onto public com.kzysure.demo.VO.ResultVO com.kzysure.demo.controller.FileUploadController.fileUpload(org.springframework.web.multipart.MultipartFile)
+Mapped "{[/oauth/githubOauth],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.kzysure.demo.controller.GithubOauthController.githubOauth(java.lang.String,java.lang.String,java.util.Map<java.lang.String, java.lang.String>)
+Mapped "{[/pay/create],methods=[GET]}" onto public void com.kzysure.demo.controller.PayController.create(java.lang.String,java.lang.String)
+Mapped "{[/seller/product/list],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.kzysure.demo.controller.ProductController.list(java.lang.Integer,java.lang.Integer,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/seller/loginto],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.kzysure.demo.controller.SellerLoginController.login(java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/seller/denglu],methods=[GET]}" onto public com.kzysure.demo.VO.LoginResponse com.kzysure.demo.controller.SellerLoginController.denglu(java.lang.String,java.lang.String)
+Mapped "{[/seller/order/list],methods=[GET]}" onto public java.util.List<com.kzysure.demo.VO.OrderVO> com.kzysure.demo.controller.SellerOrderController.list()
+Mapped "{[/seller/order/finish],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.kzysure.demo.controller.SellerOrderController.finish(java.lang.String,java.util.Map<java.lang.String, java.lang.Object>)
+Mapped "{[/seller/order/cancel],methods=[GET]}" onto public com.kzysure.demo.VO.ResultVO com.kzysure.demo.controller.SellerOrderController.cancel(java.lang.String)
+Mapped "{[/seller/order/detail],methods=[GET]}" onto public com.kzysure.demo.dto.OrderDTO com.kzysure.demo.controller.SellerOrderController.detail(java.lang.String,javax.servlet.http.HttpServletResponse)
+Mapped "{[/seller/login],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.kzysure.demo.controller.SellerUserController.login(java.lang.String,java.util.Map<java.lang.String, java.lang.String>,javax.servlet.http.HttpServletResponse)
+Mapped "{[/seller/logout],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.kzysure.demo.controller.SellerUserController.logout(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.util.Map<java.lang.String, java.lang.String>)
+Mapped "{[/wechat/userInfo],methods=[GET]}" onto public java.lang.String com.kzysure.demo.controller.WechatController.getUserInfo(java.lang.String,java.lang.String)
+Mapped "{[/wechat/authorize],methods=[GET]}" onto public java.lang.String com.kzysure.demo.controller.WechatController.authorize(java.lang.String)
+Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Detected @ExceptionHandler methods in sellerAuthorizeHandler
+Detected @ExceptionHandler methods in sellerExceptionHandler
+Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+ClassTemplateLoader for Spring macros added to FreeMarker configuration
+Registering @ServerEndpoint class: class com.kzysure.demo.service.WebSocket
+Registering beans for JMX exposure on startup
+Initializing ProtocolHandler ["http-nio-8080"]
+Starting ProtocolHandler ["http-nio-8080"]
+Using a shared selector for servlet write/read
+Tomcat started on port(s): 8080 (http)
+Started SellApplication in 39.771 seconds (JVM running for 56.232)
+Initializing Spring FrameworkServlet 'dispatcherServlet'
+FrameworkServlet 'dispatcherServlet': initialization started
+FrameworkServlet 'dispatcherServlet': initialization completed in 67 ms
+【websocket消息】有新的连接，总数：1
+【登陆校验】，redis查不到token
+HHH000397: Using ASTQueryTranslatorFactory
+【websocket消息】关闭连接
+【websocket消息】有新的连接，总数：1
+【Websocket】，广播消息：WebsocketVO(key=1, msgType=success, msg=您有新的未来外卖订单，请注意接单！)
+【websocket消息】关闭连接
+【websocket消息】有新的连接，总数：1
+【Websocket】，广播消息：WebsocketVO(key=1, msgType=success, msg=您有新的未来外卖订单，请注意接单！)
+【websocket消息】关闭连接
+【websocket消息】有新的连接，总数：1
+【websocket消息】关闭连接
+【websocket消息】有新的连接，总数：1
+【websocket消息】关闭连接
+【websocket消息】有新的连接，总数：1
+【Websocket】，广播消息：WebsocketVO(key=1, msgType=success, msg=您有新的未来外卖订单，请注意接单！)
+【websocket消息】关闭连接
+【websocket消息】有新的连接，总数：1
+【Websocket】，广播消息：WebsocketVO(key=1, msgType=success, msg=您有新的未来外卖订单，请注意接单！)
+【Websocket】，广播消息：WebsocketVO(key=1, msgType=success, msg=您有新的未来外卖订单，请注意接单！)
+【websocket消息】关闭连接
+【websocket消息】有新的连接，总数：1
+【websocket消息】关闭连接
+【websocket消息】有新的连接，总数：1
+【Websocket】，广播消息：WebsocketVO(key=1, msgType=success, msg=您有新的未来外卖订单，请注意接单！)
+【Websocket】，广播消息：WebsocketVO(key=1, msgType=success, msg=您有新的未来外卖订单，请注意接单！)
+【Websocket】，广播消息：WebsocketVO(key=1, msgType=success, msg=您有新的未来外卖订单，请注意接单！)
+【websocket消息】关闭连接
+【websocket消息】有新的连接，总数：1
+【Websocket】，广播消息：WebsocketVO(key=1, msgType=success, msg=您有新的未来外卖订单，请注意接单！)
+【Websocket】，广播消息：WebsocketVO(key=1, msgType=success, msg=您有新的未来外卖订单，请注意接单！)
+【websocket消息】关闭连接
+【websocket消息】有新的连接，总数：1
+【Websocket】，广播消息：WebsocketVO(key=1, msgType=success, msg=您有新的未来外卖订单，请注意接单！)
+【Websocket】，广播消息：WebsocketVO(key=1, msgType=success, msg=您有新的未来外卖订单，请注意接单！)
+【websocket消息】关闭连接
+【websocket消息】有新的连接，总数：1
+【登陆校验】，redis查不到token
+【websocket消息】关闭连接
+【websocket消息】有新的连接，总数：1
+【websocket消息】关闭连接
+【websocket消息】有新的连接，总数：1
+【Websocket】，广播消息：WebsocketVO(key=1, msgType=success, msg=您有新的未来外卖订单，请注意接单！)
+【websocket消息】关闭连接
+【websocket消息】有新的连接，总数：1
+【Websocket】，广播消息：WebsocketVO(key=1, msgType=success, msg=您有新的未来外卖订单，请注意接单！)
+【Websocket】，广播消息：WebsocketVO(key=1, msgType=success, msg=您有新的未来外卖订单，请注意接单！)
+【websocket消息】关闭连接
+【websocket消息】有新的连接，总数：1
+【Websocket】，广播消息：WebsocketVO(key=1, msgType=success, msg=您有新的未来外卖订单，请注意接单！)
+【websocket消息】关闭连接
+【websocket消息】有新的连接，总数：1
+【websocket消息】关闭连接
+【websocket消息】有新的连接，总数：1
+【websocket消息】关闭连接
+【websocket消息】有新的连接，总数：1
+【Websocket】，广播消息：WebsocketVO(key=1, msgType=success, msg=您有新的未来外卖订单，请注意接单！)
+【websocket消息】关闭连接
+【websocket消息】有新的连接，总数：1
+【websocket消息】关闭连接
+【websocket消息】有新的连接，总数：1
+【websocket消息】关闭连接
+【websocket消息】有新的连接，总数：1
+【websocket消息】关闭连接
+【websocket消息】有新的连接，总数：1
+【websocket消息】关闭连接
+【websocket消息】有新的连接，总数：1
+【websocket消息】关闭连接
+【websocket消息】有新的连接，总数：1
+【websocket消息】关闭连接
+【websocket消息】有新的连接，总数：1
+【websocket消息】关闭连接
+【websocket消息】有新的连接，总数：1
+【websocket消息】关闭连接
+【websocket消息】有新的连接，总数：1
+【websocket消息】关闭连接
+【websocket消息】有新的连接，总数：1
+【websocket消息】关闭连接
+【websocket消息】有新的连接，总数：1
+【websocket消息】关闭连接
+【websocket消息】有新的连接，总数：1
+【websocket消息】关闭连接
+【websocket消息】有新的连接，总数：1
+【websocket消息】关闭连接
+【websocket消息】有新的连接，总数：1
+【websocket消息】关闭连接
+【websocket消息】有新的连接，总数：1
+【websocket消息】关闭连接
+【websocket消息】有新的连接，总数：1
+【Websocket】，广播消息：WebsocketVO(key=1, msgType=success, msg=您有新的未来外卖订单，请注意接单！)
+【websocket消息】关闭连接
+【websocket消息】有新的连接，总数：1
+【websocket消息】关闭连接
+【websocket消息】有新的连接，总数：1
+【websocket消息】关闭连接
+【websocket消息】有新的连接，总数：1
+【websocket消息】关闭连接
+【websocket消息】有新的连接，总数：1
+【websocket消息】关闭连接
+【websocket消息】有新的连接，总数：1
+【websocket消息】关闭连接
+【websocket消息】有新的连接，总数：1
+【websocket消息】关闭连接
+【websocket消息】有新的连接，总数：1
+【websocket消息】关闭连接
+【websocket消息】有新的连接，总数：1
+【websocket消息】关闭连接
+【websocket消息】有新的连接，总数：1
+【websocket消息】关闭连接
+【websocket消息】有新的连接，总数：1
+【websocket消息】关闭连接
+【websocket消息】有新的连接，总数：1
+【websocket消息】关闭连接
+【websocket消息】有新的连接，总数：1
+【websocket消息】关闭连接
+【websocket消息】有新的连接，总数：1
+【websocket消息】关闭连接
+【websocket消息】有新的连接，总数：1
+【websocket消息】关闭连接
+【websocket消息】有新的连接，总数：1
+【websocket消息】关闭连接
+【websocket消息】有新的连接，总数：1
+【websocket消息】关闭连接
+【websocket消息】有新的连接，总数：1
+【websocket消息】关闭连接
+【websocket消息】有新的连接，总数：1
+【websocket消息】关闭连接
+【websocket消息】有新的连接，总数：1

@@ -1,6 +1,8 @@
 package com.kzysure.demo.service;
 
 
+import com.kzysure.demo.VO.WebsocketVO;
+import com.kzysure.demo.utils.ServerEncoder;
 import java.util.concurrent.CopyOnWriteArraySet;
 import javax.websocket.OnClose;
 import javax.websocket.OnMessage;
@@ -16,7 +18,7 @@ import org.springframework.stereotype.Component;
  * @since 1.0.0
  */
 @Component
-@ServerEndpoint("/websocket")
+@ServerEndpoint(value = "/websocket",encoders = {ServerEncoder.class})
 @Slf4j
 public class WebSocket {
   private Session session;
@@ -37,11 +39,11 @@ public class WebSocket {
   public void onMessage(String message){
     log.info("收到客户端发来的消息：{}",message);
   }
-  public void sendMessage(String message){
+  public void sendMessage(WebsocketVO websocketVO){
     for (WebSocket webSocket: webSockets){
-      log.info("【Websocket】，广播消息：{}",message);
+      log.info("【Websocket】，广播消息：{}",websocketVO);
       try{
-        webSocket.session.getBasicRemote().sendText(message);
+        webSocket.session.getBasicRemote().sendObject(websocketVO);
 
       }catch(Exception e){
         e.printStackTrace();
